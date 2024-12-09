@@ -1,0 +1,13 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "./",
+    "types": []
+  },
+  "files": [
+    "angular/modules/uwrf-acm-website.module.ts",
+  ],
+  "include": [
+    "angular/**/*.d.ts"
+  ]
+}
