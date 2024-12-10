@@ -1,5 +1,6 @@
 // ss-title.component.ts 
-import { Component } from "@angular/core";
+import {Component, Input} from "@angular/core";
+import {TagType} from "../../../models/html/TagType";
 
 @Component({
     selector: 'ss-title',
@@ -7,7 +8,11 @@ import { Component } from "@angular/core";
     styleUrls: ['./ss-title-style.component.css']
 })
 export class SsTitleComponent {
+    @Input() tagType: TagType = TagType.H1;
+    @Input() text: string;
     constructor() {
         
     }
+
+    protected readonly TagType = TagType;
 }
