@@ -1,6 +1,8 @@
-import {Component, Input, OnInit} from "@angular/core";
+import {AfterViewInit, Component, Input, OnInit} from "@angular/core";
 import {ActivatedRoute, NavigationEnd, Router} from "@angular/router";
 import {filter, map, mergeMap} from "rxjs";
+import {globalParticles} from "../../assets/particleAssets";
+declare var particlesJS: any;
 
 @Component({
     selector: 'app',
@@ -8,10 +10,13 @@ import {filter, map, mergeMap} from "rxjs";
     inputs: ['name'],
     styleUrls: ['./app-style.component.css']
 })
-export class AppComponent implements OnInit {
+export class AppComponent implements OnInit, AfterViewInit {
     title: string;
     constructor(private router: Router, private activatedRoot: ActivatedRoute) {
         console.log('AppComponent loaded');
+    }
+    ngAfterViewInit() {
+        particlesJS("particle-container", globalParticles);
     }
     ngOnInit() {
         this.router.events.pipe(filter((event) => event instanceof NavigationEnd),
