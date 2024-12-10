@@ -27,7 +27,7 @@ Our Dev Team is a cornerstone of the ACM chapter, offering hands-on
 opportunities to create, learn, and grow as a developer.
 
 ### **What We Do:**
-- 🖥️ **Develop** apps, games, and websites..
+- 🖥️ **Develop** apps, games, and websites.
 - 🤓 **Learn** about software development practices, tools, and teamwork.
 - 🤝 **Collaborate** to build projects you can showcase with pride.
 - 🎮 **Have Fun** creating the apps, games, and tools you’ve always wanted!
