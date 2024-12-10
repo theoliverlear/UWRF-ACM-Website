@@ -15,6 +15,8 @@ import {directives} from "../directives/directives";
 import {elements} from "../components/elements/elements";
 import {pages} from "../components/pages/pages";
 import {services} from "../services/services";
+import {NgxParticlesModule} from "@tsparticles/angular";
+import { CommonModule } from '@angular/common';
 
 @NgModule({
     declarations: [
@@ -27,9 +29,11 @@ import {services} from "../services/services";
         BrowserModule,
         BrowserAnimationsModule,
         FormsModule,
+        CommonModule,
         AppRouting,
         RouterOutlet,
         NgOptimizedImage,
+        NgxParticlesModule,
         HttpClientModule],
     providers: [
         ...services,
