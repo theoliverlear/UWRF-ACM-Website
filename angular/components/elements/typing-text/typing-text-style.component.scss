@@ -1,0 +1,16 @@
+@import "../../../styles/global-variables";
+@import "../../../styles/global-mixins";
+@import "../../../styles/global-functions";
+@import "../../../styles/global-placeholders";
+
+typing-text {
+    @include flex(center, center, column);
+    //--------------------------Text-Type-Styles------------------------------
+    .being-typed::after {
+        text-decoration: none;
+        content: "_";
+    }
+    .typing-completed::after {
+        content: "";
+    }
+}
