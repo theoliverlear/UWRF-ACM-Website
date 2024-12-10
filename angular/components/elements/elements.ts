@@ -8,9 +8,15 @@ import {NavBarComponent} from "./nav-bar/nav-bar.component";
 import {NavItemComponent} from "./nav-item/nav-item.component";
 import {SsTitleComponent} from "./ss-title/ss-title.component";
 import {HomeAnchorComponent} from "./home-anchor/home-anchor.component";
+import {
+    FadeInOutContentComponent
+} from "./fade-in-out-content/fade-in-out-content.component";
+import {TypingTextComponent} from "./typing-text/typing-text.component";
+import {TopicBubbleComponent} from "./topic-bubble/topic-bubble.component";
 
 
 export const elements = [
+    FadeInOutContentComponent,
     HomeAnchorComponent,
     NavBarComponent,
     NavItemComponent,
@@ -21,4 +27,6 @@ export const elements = [
     SsImgComponent,
     SsInputComponent,
     SsTitleComponent,
+    TopicBubbleComponent,
+    TypingTextComponent,
 ]
