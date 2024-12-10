@@ -16,3 +16,8 @@ export function getIconImagePath(fileName: string): string {
 const imageAssetPath: string = 'assets/images/';
 const logoImageAssetPath: string = imageAssetPath + 'logo/';
 const iconImageAssetPath: string = imageAssetPath + 'icon/';
+
+export const logoImageAsset: ImageAsset = {
+    src: getLogoImagePath('logo.png'),
+    alt: 'logo'
+};
