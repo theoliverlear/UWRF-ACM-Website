@@ -6,9 +6,12 @@ import {SsImgComponent} from "./ss-img/ss-img.component";
 import {SsInputComponent} from "./ss-input/ss-input.component";
 import {NavBarComponent} from "./nav-bar/nav-bar.component";
 import {NavItemComponent} from "./nav-item/nav-item.component";
+import {SsTitleComponent} from "./ss-title/ss-title.component";
+import {HomeAnchorComponent} from "./home-anchor/home-anchor.component";
 
 
 export const elements = [
+    HomeAnchorComponent,
     NavBarComponent,
     NavItemComponent,
     SsAnchorComponent,
@@ -17,4 +20,5 @@ export const elements = [
     SsHeadComponent,
     SsImgComponent,
     SsInputComponent,
+    SsTitleComponent,
 ]
