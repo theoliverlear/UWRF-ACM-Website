@@ -28,6 +28,7 @@
             ],
             "styles": [
               "angular/components/app/app-style.component.css",
+              "angular/components/elements/home-anchor/home-anchor-style.component.css",
               "angular/components/elements/nav-bar/nav-bar-style.component.css",
               "angular/components/elements/nav-item/nav-item-style.component.css",
               "angular/components/elements/ss-anchor/ss-anchor-style.component.css",
@@ -35,6 +36,7 @@
               "angular/components/elements/ss-footer/ss-footer-style.component.css",
               "angular/components/elements/ss-img/ss-img-style.component.css",
               "angular/components/elements/ss-input/ss-input-style.component.css",
+              "angular/components/elements/ss-title/ss-title-style.component.css",
               "angular/components/pages/home/home-style.component.css"
             ],
             "scripts": [],
@@ -55,7 +57,7 @@
                   "with": "angular/environments/environment.prod.ts"
                 }
               ],
-              "outputHashing": "none",
+              "outputHashing": "all",
               "optimization": {
                 "scripts": true,
                 "styles": {
