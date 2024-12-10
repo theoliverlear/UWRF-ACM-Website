@@ -1,4 +1,23 @@
 <!-- home.component.html -->
-<div>
-    <h1>ACM</h1>
+<!--<div>-->
+<!--    <h1>ACM</h1>-->
+<!--</div>-->
+<div id="typing-promo-text-container-div">
+<typing-text
+    #topTypingText
+    [typeSpeed]="TypeSpeed.FAST"
+    [textToType]="promoTextFullTitle"
+    [tagType]="TagType.H2"
+    [applyBeingTypedStyle]="true"
+    [typeOnLoad]="false"
+    />
+    <div *ngIf="showFadeInOut">
+        <fade-in-out-content
+                id="group-title-div"
+                [fadeInOutAnimationProperties]="acmTitleFadeInOutAnimationProperties">
+            <ss-title
+                    [tagType]="TagType.H1"
+                    [text]="promoTextAcronym"/>
+        </fade-in-out-content>
+    </div>
 </div>
