@@ -1,0 +1,2 @@
+nodemon --watch angular.json --exec "ng serve --configuration development"
+ng build --configuration production
