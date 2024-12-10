@@ -7,4 +7,11 @@
 home {
     @include flex(center, center, column);
     color: $pristine-white;
+    #typing-promo-text-container-div {
+        @include square-size(80%);
+    }
+    #group-title-div {
+        align-self: center;
+        justify-self: center;
+    }
 }
