@@ -28,6 +28,7 @@
             ],
             "styles": [
               "angular/components/app/app-style.component.css",
+              "angular/components/elements/fade-in-out-content/fade-in-out-content-style.component.css",
               "angular/components/elements/home-anchor/home-anchor-style.component.css",
               "angular/components/elements/nav-bar/nav-bar-style.component.css",
               "angular/components/elements/nav-item/nav-item-style.component.css",
@@ -37,6 +38,8 @@
               "angular/components/elements/ss-img/ss-img-style.component.css",
               "angular/components/elements/ss-input/ss-input-style.component.css",
               "angular/components/elements/ss-title/ss-title-style.component.css",
+              "angular/components/elements/topic-bubble/topic-bubble-style.component.css",
+              "angular/components/elements/typing-text/typing-text-style.component.css",
               "angular/components/pages/home/home-style.component.css"
             ],
             "scripts": [],
