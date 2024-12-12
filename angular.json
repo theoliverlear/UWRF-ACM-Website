@@ -32,6 +32,7 @@
               "angular/components/elements/event-popup/event-popup-style.component.css",
               "angular/components/elements/fade-in-content/fade-in-content-style.component.css",
               "angular/components/elements/fade-in-out-content/fade-in-out-content-style.component.css",
+              "angular/components/elements/floating-content/floating-content-style.component.css",
               "angular/components/elements/home-anchor/home-anchor-style.component.css",
               "angular/components/elements/nav-bar/nav-bar-style.component.css",
               "angular/components/elements/nav-item/nav-item-style.component.css",
