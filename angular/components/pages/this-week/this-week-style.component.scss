@@ -1,0 +1,14 @@
+ // this-week-style.component.scss
+@import "../../../styles/global-variables";
+@import "../../../styles/global-mixins";
+@import "../../../styles/global-functions";
+@import "../../../styles/global-placeholders";
+
+this-week {
+    @include flex(flex-start, center, column);
+    this-week-title-container {
+        this-week-title {
+            margin: $one-percent 0 0 0;
+        }
+    }
+}
