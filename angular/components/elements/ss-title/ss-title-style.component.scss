@@ -5,5 +5,6 @@
 @import "../../../styles/global-placeholders";
 
 ss-title {
-
+    @include flex(center, center, row);
+    color: $pristine-white;
 }
