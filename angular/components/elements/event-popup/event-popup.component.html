@@ -1,0 +1,17 @@
+<!-- event-popup.component.html -->
+<ng-container>
+    <div class="event-popup-text-div">
+        <div>
+            <h4>
+               {{ meetingEvent.title }}
+            </h4>
+        </div>
+        <div class="subtitle-div">
+            <h6>
+                {{ meetingEvent.location }}
+            </h6>
+        </div>
+    </div>
+    <hr/>
+    <event-countdown-timer [eventDate]="meetingEvent.eventDate"/>
+</ng-container>
