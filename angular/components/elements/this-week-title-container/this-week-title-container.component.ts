@@ -1,5 +1,9 @@
 // this-week-title-container.component.ts 
 import {Component, Input} from "@angular/core";
+import {
+    thisWeekSubtitleFadeInAnimationProperties,
+    thisWeekTitleFadeInAnimationProperties
+} from "../../animations/animationProperties";
 
 @Component({
     selector: 'this-week-title-container',
@@ -11,4 +15,7 @@ export class ThisWeekTitleContainerComponent {
     constructor() {
         
     }
+
+    protected readonly thisWeekTitleFadeInAnimationProperties = thisWeekTitleFadeInAnimationProperties;
+    protected readonly thisWeekSubtitleFadeInAnimationProperties = thisWeekSubtitleFadeInAnimationProperties;
 }
