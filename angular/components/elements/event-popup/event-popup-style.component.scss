@@ -1,0 +1,24 @@
+ // event-popup-style.component.scss
+@import "../../../styles/global-variables";
+@import "../../../styles/global-mixins";
+@import "../../../styles/global-functions";
+@import "../../../styles/global-placeholders";
+
+event-popup {
+    //background-color: $light-charcoal;
+    //background-color: $falcon-red;
+    background-image: radial-gradient(at center, $falcon-red 20%, $faded-falcon-red);
+    box-shadow: $alabaster-stone 0 0 $quarter-percent 0;
+    padding: $half-percent;
+    border-radius: $half-percent;
+    @include flex(center, center, column);
+    .event-popup-text-div {
+        @include flex(center, center, column);
+    }
+    hr {
+        color: $pristine-white;
+        background-color: $pristine-white;
+        //border: $pristine-white 1px solid;
+        width: 90%;
+    }
+}
