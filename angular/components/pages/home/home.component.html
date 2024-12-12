@@ -2,14 +2,15 @@
 <!--<div>-->
 <!--    <h1>ACM</h1>-->
 <!--</div>-->
+<event-popup/>
 <div id="typing-promo-text-container-div">
-<typing-text
-    #topTypingText
-    [typeSpeed]="TypeSpeed.FAST"
-    [textToType]="promoTextFullTitle"
-    [tagType]="TagType.H2"
-    [applyBeingTypedStyle]="true"
-    [typeOnLoad]="false"
+    <typing-text
+        #topTypingText
+        [typeSpeed]="TypeSpeed.FAST"
+        [textToType]="promoTextFullTitle"
+        [tagType]="TagType.H2"
+        [applyBeingTypedStyle]="true"
+        [typeOnLoad]="false"
     />
     <div *ngIf="showFadeInOut">
         <fade-in-out-content
