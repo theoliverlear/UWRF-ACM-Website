@@ -13,9 +13,28 @@ import {
 } from "./fade-in-out-content/fade-in-out-content.component";
 import {TypingTextComponent} from "./typing-text/typing-text.component";
 import {TopicBubbleComponent} from "./topic-bubble/topic-bubble.component";
+import {
+    ThisWeekTitleContainerComponent
+} from "./this-week-title-container/this-week-title-container.component";
+import {
+    ThisWeekTitleComponent
+} from "./this-week-title/this-week-title.component";
+import {
+    ThisWeekSubtitleComponent
+} from "./this-week-subtitle/this-week-subtitle.component";
+import {
+    FadeInContentComponent
+} from "./fade-in-content/fade-in-content.component";
+import {EventPopupComponent} from "./event-popup/event-popup.component";
+import {
+    EventCountdownTimerComponent
+} from "./event-countdown-timer/event-countdown-timer.component";
 
 
 export const elements = [
+    EventCountdownTimerComponent,
+    EventPopupComponent,
+    FadeInContentComponent,
     FadeInOutContentComponent,
     HomeAnchorComponent,
     NavBarComponent,
@@ -27,6 +46,9 @@ export const elements = [
     SsImgComponent,
     SsInputComponent,
     SsTitleComponent,
+    ThisWeekSubtitleComponent,
+    ThisWeekTitleComponent,
+    ThisWeekTitleContainerComponent,
     TopicBubbleComponent,
     TypingTextComponent,
 ]
