@@ -9,9 +9,17 @@ home {
     color: $pristine-white;
     #typing-promo-text-container-div {
         @include square-size(80%);
+        @include flex(center, center, column);
+        typing-text {
+            text-align: center;
+        }
     }
     #group-title-div {
         align-self: center;
         justify-self: center;
+    }
+    event-popup {
+        position: absolute;
+        top: $five-percent;
     }
 }
