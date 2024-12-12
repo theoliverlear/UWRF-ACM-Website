@@ -1,0 +1,23 @@
+<!-- event-countdown-timer.component.html -->
+<ng-container>
+    <div class="time-title-div">
+        <h5>
+            {{ this.remainingTime | dateDifference: DateInterval.DAYS }} Days
+        </h5>
+    </div>
+    <div class="time-title-div">
+        <h5>
+            {{ this.remainingTime | dateDifference: DateInterval.HOURS }} Hours
+        </h5>
+    </div>
+    <div class="time-title-div">
+        <h5>
+            {{ this.remainingTime | dateDifference: DateInterval.MINUTES }} Minutes
+        </h5>
+    </div>
+    <div class="time-title-div">
+        <h5>
+            {{ this.remainingTime | dateDifference: DateInterval.SECONDS }} Seconds
+        </h5>
+    </div>
+</ng-container>
