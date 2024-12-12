@@ -28,6 +28,9 @@
             ],
             "styles": [
               "angular/components/app/app-style.component.css",
+              "angular/components/elements/event-countdown-timer/event-countdown-timer-style.component.css",
+              "angular/components/elements/event-popup/event-popup-style.component.css",
+              "angular/components/elements/fade-in-content/fade-in-content-style.component.css",
               "angular/components/elements/fade-in-out-content/fade-in-out-content-style.component.css",
               "angular/components/elements/home-anchor/home-anchor-style.component.css",
               "angular/components/elements/nav-bar/nav-bar-style.component.css",
@@ -38,9 +41,17 @@
               "angular/components/elements/ss-img/ss-img-style.component.css",
               "angular/components/elements/ss-input/ss-input-style.component.css",
               "angular/components/elements/ss-title/ss-title-style.component.css",
+              "angular/components/elements/this-week-subtitle/this-week-subtitle-style.component.css",
+              "angular/components/elements/this-week-title-container/this-week-title-container-style.component.css",
+              "angular/components/elements/this-week-title/this-week-title-style.component.css",
               "angular/components/elements/topic-bubble/topic-bubble-style.component.css",
               "angular/components/elements/typing-text/typing-text-style.component.css",
-              "angular/components/pages/home/home-style.component.css"
+              "angular/components/pages/about/about-style.component.css",
+              "angular/components/pages/dev-team/dev-team-style.component.css",
+              "angular/components/pages/home/home-style.component.css",
+              "angular/components/pages/join/join-style.component.css",
+              "angular/components/pages/not-found/not-found-style.component.css",
+              "angular/components/pages/this-week/this-week-style.component.css"
             ],
             "scripts": [],
             "fileReplacements": []
