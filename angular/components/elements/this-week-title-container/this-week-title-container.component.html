@@ -1,5 +1,10 @@
 <!-- this-week-title-container.component.html -->
 <ng-container>
-    <this-week-title/>
-    <this-week-subtitle [topicTitle]="topicTitle"/>
+    <fade-in-content
+    [animationProperties]="thisWeekTitleFadeInAnimationProperties">
+        <this-week-title/>
+    </fade-in-content>
+    <fade-in-content [animationProperties]="thisWeekSubtitleFadeInAnimationProperties">
+        <this-week-subtitle [topicTitle]="topicTitle"/>
+    </fade-in-content>
 </ng-container>
