@@ -11,7 +11,8 @@ import {
     TypingTextComponent
 } from "../../elements/typing-text/typing-text.component";
 import {
-    acmTitleFadeInOutAnimationProperties
+    acmTitleFadeInOutAnimationProperties,
+    homeEventPopupFadeInAnimationProperties
 } from "../../animations/animationProperties";
 
 @Component({
@@ -53,4 +54,5 @@ export class HomeComponent implements AfterViewInit{
     protected readonly TagType = TagType;
     protected readonly promoTextAcronym = promoTextAcronym;
     protected readonly acmTitleFadeInOutAnimationProperties = acmTitleFadeInOutAnimationProperties;
+    protected readonly homeEventPopupFadeInAnimationProperties = homeEventPopupFadeInAnimationProperties;
 }
