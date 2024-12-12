@@ -1,0 +1,12 @@
+ // this-week-subtitle-style.component.scss
+@import "../../../styles/global-variables";
+@import "../../../styles/global-mixins";
+@import "../../../styles/global-functions";
+@import "../../../styles/global-placeholders";
+
+this-week-subtitle {
+    h2, h3, h4, h5 {
+        font-style: italic;
+        text-decoration: underline;
+    }
+}
