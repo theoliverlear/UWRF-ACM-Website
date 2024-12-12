@@ -1,6 +1,6 @@
 // fade-in-out-content.component.ts 
 import {Component, HostBinding, Input} from "@angular/core";
-import {fadeInOut} from "../../animations/animations";
+import {fadeInOutAnimation} from "../../animations/animations";
 import {
     FadeInOutProperties
 } from "../../animations/models/FadeInOutProperties";
@@ -10,7 +10,7 @@ import {
     templateUrl: './fade-in-out-content.component.html',
     styleUrls: ['./fade-in-out-content-style.component.css'],
     animations: [
-        fadeInOut
+        fadeInOutAnimation
     ]
 })
 export class FadeInOutContentComponent {
