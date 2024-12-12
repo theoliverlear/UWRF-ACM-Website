@@ -29,6 +29,9 @@ import {EventPopupComponent} from "./event-popup/event-popup.component";
 import {
     EventCountdownTimerComponent
 } from "./event-countdown-timer/event-countdown-timer.component";
+import {
+    FloatingContentComponent
+} from "./floating-content/floating-content.component";
 
 
 export const elements = [
@@ -36,6 +39,7 @@ export const elements = [
     EventPopupComponent,
     FadeInContentComponent,
     FadeInOutContentComponent,
+    FloatingContentComponent,
     HomeAnchorComponent,
     NavBarComponent,
     NavItemComponent,
