@@ -31,15 +31,15 @@ export class HomeComponent implements AfterViewInit{
     }
     promoSequence(): Promise<void> {
         this.topTypingText.typeText().then(() => {
-            this.topTypingText.booleanBlinkingCursor = true; // Start blinking
+            this.topTypingText.booleanBlinkingCursor = true;
             this.topTypingText.toggleBlinkingClass();
 
             this.topTypingText.delay(2000).then(() => {
-                this.topTypingText.booleanBlinkingCursor = false; // Stop blinking during deletion
+                this.topTypingText.booleanBlinkingCursor = false;
                 this.topTypingText.deleteText().then(() => {
                     this.topTypingText.textToType = promoTextCallUs;
                     this.topTypingText.typeText().then(() => {
-                        this.topTypingText.booleanBlinkingCursor = true; // Resume blinking after new text is typed
+                        this.topTypingText.booleanBlinkingCursor = true;
                             this.showFadeInOut = true;
                     });
                 });
