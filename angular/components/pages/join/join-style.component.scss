@@ -5,5 +5,34 @@
 @import "../../../styles/global-placeholders";
 
 join {
-
+    @include flex(flex-start, center, column);
+    #discord-title-div {
+        margin: $one-percent 0;
+    }
+    #in-person-div {
+        @include flex(center, center, column);
+        margin: $one-percent 0;
+        ss-paragraph {
+            margin: $one-percent 0;
+            width: 50%;
+            color: $light-charcoal;
+        }
+    }
+    ss-anchor {
+        ss-img {
+            @extend %soft-border-radius;
+            background-color: $pristine-white;
+            border: $alabaster-stone $thin-border solid;
+            box-shadow: $soft-rose $quarter-percent $quarter-percent 0 0;
+            transition: box-shadow, transform, 0.3s;
+            &:hover {
+                box-shadow: $falcon-red simplest-calc(0.25) simplest-calc(0.25) 0 0;
+                cursor: pointer;
+            }
+            &:active {
+                box-shadow: none;
+                transform: translate(simplest-calc(0.15), simplest-calc(0.15));
+            }
+        }
+    }
 }
