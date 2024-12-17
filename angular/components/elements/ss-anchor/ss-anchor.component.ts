@@ -21,10 +21,20 @@ export class SsAnchorComponent implements OnInit {
     ngOnInit() {
         this.hasText = this.elementLink instanceof TextElementLink;
     }
-    @HostListener('click')
+    @HostListener('click', ['$event'])
     onClick() {
-        this.router.navigate([this.elementLink.hrefLink]);
-    }
+        if (this.isExternalLink(this.elementLink.hrefLink)) {
+            event.preventDefault();
 
+            window.open(this.elementLink.hrefLink, this.elementLink.targetType);
+        } else {
+            this.router.navigate([this.elementLink.hrefLink]);
+        }
+    }
+    isExternalLink(href: string): boolean {
+        return href.startsWith('http://') ||
+               href.startsWith('https://') ||
+               href.startsWith('//');
+    }
     protected readonly TagType = TagType;
 }
