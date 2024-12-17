@@ -23,5 +23,8 @@ export class EventCountdownTimerComponent implements OnInit {
         const remainingTime: number = (targetTime - currentTime) / 1000;
         this.remainingTime = remainingTime;
     }
+    isNow() {
+        return this.remainingTime <= 0;
+    }
     protected readonly DateInterval = DateInterval;
 }
