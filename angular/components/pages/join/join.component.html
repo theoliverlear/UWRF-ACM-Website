@@ -1,1 +1,22 @@
 <!-- join.component.html -->
+<ng-container>
+    <div id="discord-title-div">
+        <ss-title
+                [text]="discordTitleText"
+                [tagType]="TagType.H2"/>
+        <ss-title
+                [text]="discordJoinLinkText"
+                [tagType]="TagType.H4"
+        />
+    </div>
+    <ss-anchor [elementLink]="discordElementLink">
+        <ss-img [imageAsset]="discordLinkImageAsset"/>
+    </ss-anchor>
+    <div id="in-person-div">
+        <ss-title
+                [text]="inPersonTitleText"
+                [tagType]="TagType.H4"/>
+        <ss-paragraph
+                [text]="inPersonDetailsText"/>
+    </div>
+</ng-container>
