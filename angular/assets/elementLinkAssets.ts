@@ -25,3 +25,5 @@ export const navBarDevTeamElementLink = new TextElementLink('/dev-team',
                                                             false,
                                                             'Dev Team',
                                                             TagType.H4);
+export const discordElementLink = new ElementLink('https://discord.gg/EJUJEBKgHJ',
+                                                      TargetType.BLANK)
