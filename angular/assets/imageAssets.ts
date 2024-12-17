@@ -21,3 +21,7 @@ export const logoImageAsset: ImageAsset = {
     src: getLogoImagePath('logo.png'),
     alt: 'logo'
 };
+export const discordLinkImageAsset: ImageAsset = {
+    src: getImagePath('discord_link.png'),
+    alt: 'Discord Link'
+};
