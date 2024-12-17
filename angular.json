@@ -41,6 +41,7 @@
               "angular/components/elements/ss-footer/ss-footer-style.component.css",
               "angular/components/elements/ss-img/ss-img-style.component.css",
               "angular/components/elements/ss-input/ss-input-style.component.css",
+              "angular/components/elements/ss-paragraph/ss-paragraph-style.component.css",
               "angular/components/elements/ss-title/ss-title-style.component.css",
               "angular/components/elements/this-week-subtitle/this-week-subtitle-style.component.css",
               "angular/components/elements/this-week-title-container/this-week-title-container-style.component.css",
