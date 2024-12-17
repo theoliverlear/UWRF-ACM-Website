@@ -1,5 +1,6 @@
 // this-week.component.ts 
 import {Component, Input} from "@angular/core";
+import {nextMeetingTitle} from "../../../assets/thisWeekAssets";
 
 @Component({
     selector: 'this-week',
@@ -7,8 +8,10 @@ import {Component, Input} from "@angular/core";
     styleUrls: ['./this-week-style.component.css']
 })
 export class ThisWeekComponent {
-    @Input() topicTitle: string = 'Hey, hi, hello, welcome!';
+    @Input() topicTitle: string;
     constructor() {
         
     }
+
+    protected readonly nextMeetingTitle = nextMeetingTitle;
 }
