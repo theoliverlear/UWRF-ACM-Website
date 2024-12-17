@@ -32,6 +32,7 @@ import {
 import {
     FloatingContentComponent
 } from "./floating-content/floating-content.component";
+import {SsParagraphComponent} from "./ss-paragraph/ss-paragraph.component";
 
 
 export const elements = [
@@ -49,6 +50,7 @@ export const elements = [
     SsHeadComponent,
     SsImgComponent,
     SsInputComponent,
+    SsParagraphComponent,
     SsTitleComponent,
     ThisWeekSubtitleComponent,
     ThisWeekTitleComponent,
