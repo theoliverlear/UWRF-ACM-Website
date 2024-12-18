@@ -21,30 +21,23 @@ export class TypingTextComponent implements AfterViewInit {
     @Input() applyBeingTypedStyle: boolean = false;
     @Input() typeOnLoad: boolean = true;
     @ViewChild('typedText', {static: false}) typedText: ElementRef;
-    booleanBlinkingCursor: boolean = false;
+    useBlinkingCursor: boolean = false;
     finishedTyping: boolean = false;
     constructor(private renderer: Renderer2) {
         console.log('TypingTextComponent loaded');
     }
 
-    async blinkCursor(): Promise<void> {
-        let element = this.typedText.nativeElement;
-        if (this.shouldBlink()) {
-
-        }
-    }
-
     shouldBlink() {
-        return this.booleanBlinkingCursor;
+        return this.useBlinkingCursor;
     }
 
     async toggleBlinkingClass(): Promise<void> {
         if (this.shouldBlink()) {
-            this.renderer.addClass(this.typedText.nativeElement, 'being-typed'); // Add blinking class
-            await this.delay(500);
-            this.renderer.removeClass(this.typedText.nativeElement, 'being-typed'); // Remove blinking class
-            await this.delay(500);
-            this.toggleBlinkingClass();
+            this.renderer.removeClass(this.typedText.nativeElement, 'being-typed');
+            this.renderer.addClass(this.typedText.nativeElement, 'blinking-cursor');
+        } else {
+            this.renderer.removeClass(this.typedText.nativeElement, 'blinking-cursor');
+            this.renderer.addClass(this.typedText.nativeElement, 'being-typed');
         }
     }
     delay(ms: number): Promise<void> {
@@ -55,7 +48,7 @@ export class TypingTextComponent implements AfterViewInit {
         if (this.typeOnLoad) {
             this.typeText().then(()=> {
                 this.finishedTyping = true;
-                this.booleanBlinkingCursor = true;
+                this.useBlinkingCursor = true;
                 this.toggleBlinkingClass();
             })
         }
@@ -98,6 +91,7 @@ export class TypingTextComponent implements AfterViewInit {
         let element = this.typedText.nativeElement;
         if (this.applyBeingTypedStyle) {
             element.classList.add('being-typed');
+            element.classList.remove('blinking-cursor');
         }
         return new Promise((resolve): void => {
             function deleteChar(): void {
