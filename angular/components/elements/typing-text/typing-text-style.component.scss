@@ -10,7 +10,21 @@ typing-text {
         text-decoration: none;
         content: "_";
     }
+    .blinking-cursor::after {
+        text-decoration: none;
+        content: "_";
+        opacity: 1;
+        animation: blink 1s steps(1, start) infinite;
+    }
     .typing-completed::after {
         content: "";
+    }
+    @keyframes blink {
+        0%, 100% {
+            opacity: 1; // Visible
+        }
+        50% {
+            opacity: 0; // Hidden
+        }
     }
 }
