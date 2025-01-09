@@ -1,5 +1,5 @@
 export const firstMeetingTitle: [string, Date] = ["Say hey, hi, hello, welcome!",
-                                                  new Date('2025-02-07')];
+                                                  new Date('2025-02-06')];
 export const noMeetingTitle: [string, Date] = ["Nothing, we are not meeting this week.",
                                                   new Date()];
 export const eventTitles: [string, Date][] = [
@@ -13,9 +13,11 @@ function getNextMeetingTitle(): [string, Date] {
     const upcomingEvents: [string, Date][] = eventTitles.filter((event: [string, Date]): boolean => {
         return event[1] > now;
     });
-    if (upcomingEvents.length > 0) {
+    let hasUpcomingEvents: boolean = upcomingEvents.length > 0;
+    if (hasUpcomingEvents) {
         upcomingEvents.sort((currentMeeting: [string, Date], nextMeeting: [string, Date]): number => {
-            return currentMeeting[1].getTime() - nextMeeting[1].getTime();
+            let meetingTimeDifference: number = currentMeeting[1].getTime() - nextMeeting[1].getTime();
+            return meetingTimeDifference;
         });
         return upcomingEvents[0];
     } else {
@@ -23,11 +25,13 @@ function getNextMeetingTitle(): [string, Date] {
     }
 }
 function hasMeetingThisWeek(): boolean {
-    const oneWeekInMilliseconds = 7 * 24 * 60 * 60 * 1000;
-    const today = new Date().getTime();
+    const oneWeekInMilliseconds: number = 7 * 24 * 60 * 60 * 1000;
+    const today: number = new Date().getTime();
     for (const event of eventTitles) {
-        const eventDate = event[1].getTime();
-        if (eventDate > today && eventDate <= today + oneWeekInMilliseconds) {
+        const eventDate: number = event[1].getTime();
+        const isFutureEvent: boolean = eventDate > today;
+        const isWithinOneWeek: boolean = eventDate <= today + oneWeekInMilliseconds;
+        if (isFutureEvent && isWithinOneWeek) {
             return true;
         }
     }
