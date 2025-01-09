@@ -1,0 +1,15 @@
+<!-- leetcode-problem.component.html -->
+<ng-container>
+    <ss-anchor class="problem-title-button" [elementLink]="elementLink"/>
+    <div class="problem-description">
+        <p>
+            {{ problem.description }}
+        </p>
+    </div>
+    <div class="problem-difficulty" [ngClass]="getDifficultyClass()">
+        <h4>
+            {{ problem.difficulty | uppercase }}
+        </h4>
+    </div>
+    <leetcode-problem-hint *ngIf="hasHint()" [hint]="problem.hint"/>
+</ng-container>
