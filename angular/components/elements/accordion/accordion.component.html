@@ -1,0 +1,15 @@
+<!-- accordion.component.html -->
+<ng-container>
+    <div>
+        <ss-img [imageAsset]="plusIconImageAsset"/>
+    </div>
+    <div class="accordion-title-div">
+        <h5>
+            {{ title }}
+        </h5>
+    </div>
+    <div class="accordion-content-div"
+    [@accordionPop]="isExpanded ? 'expanded' : 'collapsed'">
+        <ng-content></ng-content>
+    </div>
+</ng-container>
