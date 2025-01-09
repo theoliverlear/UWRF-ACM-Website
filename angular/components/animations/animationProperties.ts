@@ -24,6 +24,10 @@ export const thisWeekSubtitleFadeInAnimationProperties: FadeInProperties = {
     duration: '600ms',
     delay: '1500ms'
 };
+export const thisWeekMeetingContentFadeInAnimationProperties: FadeInProperties = {
+    duration: '600ms',
+    delay: '2500ms'
+}
 export const homeEventPopupFadeInAnimationProperties: FadeInProperties = {
     duration: '200ms',
     delay: '50ms'
