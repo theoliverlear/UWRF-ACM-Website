@@ -1,6 +1,6 @@
 import {
     animate,
-    AnimationTriggerMetadata,
+    AnimationTriggerMetadata, state,
     style,
     transition,
     trigger
@@ -20,4 +20,24 @@ export const fadeInAnimation: AnimationTriggerMetadata = trigger('fadeIn', [
         style({ opacity: 0 }),
         animate('{{ duration }} {{ delay }}', style({ opacity: 1 }))
     ])
+]);
+export const accordionPopAnimation: AnimationTriggerMetadata = trigger('accordionPop', [
+    state(
+        'collapsed',
+        style({
+            height: '0px',
+            opacity: 0,
+            padding: '0',
+            overflow: 'hidden'
+        })
+    ),
+    state(
+        'expanded',
+        style({
+            height: '*',
+            opacity: 1,
+            padding: '1rem'
+        })
+    ),
+    transition('collapsed <=> expanded', [animate('300ms ease-in-out')])
 ]);
