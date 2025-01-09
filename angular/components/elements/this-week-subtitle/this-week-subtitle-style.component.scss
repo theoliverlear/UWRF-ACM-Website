@@ -9,4 +9,16 @@ this-week-subtitle {
         font-style: italic;
         text-decoration: underline;
     }
+    h2 {
+        font-size: calc($h2-font-size * 0.9);
+    }
+    h3 {
+        font-size: calc($h3-font-size * 0.9);
+    }
+    h4 {
+        font-size: calc($h4-font-size * 0.9);
+    }
+    h5 {
+        font-size: calc($h5-font-size * 0.9);
+    }
 }
