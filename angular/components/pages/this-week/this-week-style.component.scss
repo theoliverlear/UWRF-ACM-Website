@@ -7,9 +7,13 @@
 this-week {
     @include flex(flex-start, center, column);
     this-week-title-container {
-        margin: $one-percent 0 0 0;
+        margin: $one-half-percent 0;
         this-week-title {
             margin: $one-percent 0 0 0;
         }
+    }
+    .meeting-content {
+        @include flex(center, center, column);
+        width: 80%;
     }
 }
