@@ -33,15 +33,29 @@ import {
     FloatingContentComponent
 } from "./floating-content/floating-content.component";
 import {SsParagraphComponent} from "./ss-paragraph/ss-paragraph.component";
+import {
+    LeetCodeExerciseComponent
+} from "./leetcode-exercise/leetcode-exercise.component";
+import {
+    LeetCodeProblemComponent
+} from "./leetcode-problem/leetcode-problem.component";
+import {
+    LeetCodeProblemHintComponent
+} from "./leetcode-problem-hint/leetcode-problem-hint.component";
+import {AccordionComponent} from "./accordion/accordion.component";
 
 
 export const elements = [
+    AccordionComponent,
     EventCountdownTimerComponent,
     EventPopupComponent,
     FadeInContentComponent,
     FadeInOutContentComponent,
     FloatingContentComponent,
     HomeAnchorComponent,
+    LeetCodeExerciseComponent,
+    LeetCodeProblemComponent,
+    LeetCodeProblemHintComponent,
     NavBarComponent,
     NavItemComponent,
     SsAnchorComponent,
