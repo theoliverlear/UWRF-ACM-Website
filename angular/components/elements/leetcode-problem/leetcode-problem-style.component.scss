@@ -1,0 +1,38 @@
+// leetcode-problem-style.component.scss
+@import "../../../styles/global-variables";
+@import "../../../styles/global-mixins";
+@import "../../../styles/global-functions";
+@import "../../../styles/global-placeholders";
+@import "../ss-button/ss-button-style.component";
+
+leetcode-problem {
+    @include flex(center, center, column);
+    @extend %soft-border-radius;
+    background-color: $faded-neutral-black;
+    width: auto;
+    padding: $one-percent;
+    .problem-title-button {
+        @extend ss-button;
+        width: $eighteen-percent;
+        height: $four-percent;
+        padding: $half-percent $one-percent;
+    }
+    .problem-description {
+        margin: $one-percent 0;
+        color: $pristine-white;
+        text-shadow: $alabaster-stone 0 0 simplest-calc(0.5);
+        @extend %soft-border-radius;
+    }
+    .problem-difficulty {
+        margin: $half-percent 0;
+        &.easy {
+            color: $light-green;
+        }
+        &.medium {
+            color: $soft-blue;
+        }
+        &.hard {
+            color: $falcon-red;
+        }
+    }
+}
