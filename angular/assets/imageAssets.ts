@@ -25,3 +25,7 @@ export const discordLinkImageAsset: ImageAsset = {
     src: getImagePath('discord_link.png'),
     alt: 'Discord Link'
 };
+export const plusIconImageAsset: ImageAsset = {
+    src: getIconImagePath('plus_icon.svg'),
+    alt: 'Plus Icon'
+};
