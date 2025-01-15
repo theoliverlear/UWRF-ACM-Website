@@ -1,7 +1,8 @@
 <!-- join.component.html -->
 <ng-container>
     <div id="discord-title-div">
-        <ss-title
+<!--        TODO: Add Discord Text as purple-->
+        <ss-title discordTextHighlight
                 [text]="discordTitleText"
                 [tagType]="TagType.H2"/>
         <ss-title
@@ -16,7 +17,7 @@
         <ss-title
                 [text]="inPersonTitleText"
                 [tagType]="TagType.H4"/>
-        <ss-paragraph
+        <ss-paragraph discordTextHighlight
                 [text]="inPersonDetailsText"/>
     </div>
 </ng-container>
