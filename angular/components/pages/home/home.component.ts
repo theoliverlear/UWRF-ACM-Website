@@ -14,6 +14,7 @@ import {
     acmTitleFadeInOutAnimationProperties,
     homeEventPopupFadeInAnimationProperties
 } from "../../animations/animationProperties";
+import {DelayService} from "../../../services/delay.service";
 
 @Component({
     selector: 'home',
@@ -23,31 +24,60 @@ import {
 export class HomeComponent implements AfterViewInit{
     @ViewChild('topTypingText') topTypingText: TypingTextComponent;
     showFadeInOut: boolean = false;
-    constructor() {
+    constructor(private delayService: DelayService) {
         
     }
 
     ngAfterViewInit(): void {
-        this.promoSequence();
+        this.promoSequenceLoop();
+    }
+    promoSequenceLoop() {
+        this.promoSequence().then(() => {
+
+        });
     }
     promoSequence(): Promise<void> {
-        this.topTypingText.typeText().then(() => {
-            this.topTypingText.useBlinkingCursor = true;
-            this.topTypingText.toggleBlinkingClass();
-            this.topTypingText.delay(2000).then(() => {
-                this.topTypingText.useBlinkingCursor = false;
-                this.topTypingText.deleteText().then(() => {
-                    this.topTypingText.textToType = promoTextCallUs;
-                    this.topTypingText.typeText().then(() => {
-                        this.topTypingText.useBlinkingCursor = true;
-                        this.showFadeInOut = true;
+        return this.typeIntroText().then(() => {
+            this.setBlinkingCursor(true, true);
+            this.delayService.delay(2000).then(() => {
+                this.replaceIntroText().then(() => {
+                    this.writeNameText().then(() => {
+
                     });
                 });
             });
         });
-        return Promise.resolve();
     }
-
+    protected typeIntroText(): Promise<void> {
+        return this.topTypingText.typeText();
+    }
+    protected replaceIntroText() {
+        return this.topTypingText.deleteText().then(() => {
+            this.topTypingText.textToType = promoTextCallUs;
+        });
+    }
+    protected writeNameText(): Promise<void> {
+        return this.topTypingText.typeText().then(() => {
+            this.setBlinkingCursor(true);
+            this.showFadeInOut = true;
+        });
+    }
+    protected replaceWriteNameText() {
+        return this.topTypingText.deleteText().then(() => {
+            // this.topTypingText.textToType = promoTextFullTitle;
+        });
+    }
+    protected setBlinkingCursor(cursorBlinking: boolean,
+                                toggleBlinkingClass: boolean = false): void {
+        this.topTypingText.useBlinkingCursor = cursorBlinking;
+        if (toggleBlinkingClass) {
+            this.topTypingText.toggleBlinkingClass();
+        }
+    }
+    protected resetSequence() {
+        this.topTypingText.textToType = promoTextFullTitle;
+        this.showFadeInOut = false;
+    }
     protected readonly TypeSpeed = TypeSpeed;
     protected readonly promoTextFullTitle = promoTextFullTitle;
     protected readonly TagType = TagType;
