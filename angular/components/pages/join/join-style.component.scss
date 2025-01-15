@@ -1,37 +1,43 @@
- // join-style.component.scss
+// join-style.component.scss
 @import "../../../styles/global-variables";
 @import "../../../styles/global-mixins";
 @import "../../../styles/global-functions";
 @import "../../../styles/global-placeholders";
 
 join {
-    @include flex(flex-start, center, column);
-    #discord-title-div {
-        margin: $one-percent 0;
-    }
-    #in-person-div {
-        @include flex(center, center, column);
-        margin: $one-percent 0;
-        ss-paragraph {
+    fade-in-content {
+        @include flex(flex-start, center, column);
+
+        #discord-title-div {
             margin: $one-percent 0;
-            width: 50%;
-            color: $light-charcoal;
         }
-    }
-    ss-anchor {
-        ss-img {
-            @extend %soft-border-radius;
-            background-color: $pristine-white;
-            border: $alabaster-stone $thin-border solid;
-            box-shadow: $soft-rose $quarter-percent $quarter-percent 0 0;
-            transition: box-shadow, transform, 0.3s;
-            &:hover {
-                box-shadow: $falcon-red simplest-calc(0.25) simplest-calc(0.25) 0 0;
-                cursor: pointer;
+        ss-title {
+            text-align: center;
+        }
+        #in-person-div {
+            @include flex(center, center, column);
+            margin: $one-percent 0;
+            ss-paragraph {
+                margin: $one-percent 0;
+                width: 50%;
+                color: $light-charcoal;
             }
-            &:active {
-                box-shadow: none;
-                transform: translate(simplest-calc(0.15), simplest-calc(0.15));
+        }
+        ss-anchor {
+            ss-img {
+                @extend %soft-border-radius;
+                background-color: $pristine-white;
+                border: $alabaster-stone $thin-border solid;
+                box-shadow: $faded-discord-purple $quarter-percent $quarter-percent 0 0;
+                transition: box-shadow, transform, 0.3s;
+                &:hover {
+                    box-shadow: $discord-purple simplest-calc(0.25) simplest-calc(0.25) 0 0;
+                    cursor: pointer;
+                }
+                &:active {
+                    box-shadow: none;
+                    transform: translate(simplest-calc(0.15), simplest-calc(0.15));
+                }
             }
         }
     }
