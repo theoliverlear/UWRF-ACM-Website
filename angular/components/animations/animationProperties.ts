@@ -32,3 +32,7 @@ export const homeEventPopupFadeInAnimationProperties: FadeInProperties = {
     duration: '200ms',
     delay: '50ms'
 };
+export const joinContentFadeInAnimationProperties: FadeInProperties = {
+    duration: '300ms',
+    delay: '25ms'
+};
