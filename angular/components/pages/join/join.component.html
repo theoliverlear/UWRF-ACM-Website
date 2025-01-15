@@ -1,23 +1,24 @@
 <!-- join.component.html -->
 <ng-container>
-    <div id="discord-title-div">
-<!--        TODO: Add Discord Text as purple-->
-        <ss-title discordTextHighlight
-                [text]="discordTitleText"
-                [tagType]="TagType.H2"/>
-        <ss-title
-                [text]="discordJoinLinkText"
-                [tagType]="TagType.H4"
-        />
-    </div>
-    <ss-anchor [elementLink]="discordElementLink">
-        <ss-img [imageAsset]="discordLinkImageAsset"/>
-    </ss-anchor>
-    <div id="in-person-div">
-        <ss-title
-                [text]="inPersonTitleText"
-                [tagType]="TagType.H4"/>
-        <ss-paragraph discordTextHighlight
-                [text]="inPersonDetailsText"/>
-    </div>
+    <fade-in-content [animationProperties]="joinContentFadeInAnimationProperties">
+        <div id="discord-title-div">
+            <ss-title discordTextHighlight
+                      [text]="discordTitleText"
+                      [tagType]="TagType.H2"/>
+            <ss-title
+                    [text]="discordJoinLinkText"
+                    [tagType]="TagType.H4"
+            />
+        </div>
+        <ss-anchor [elementLink]="discordElementLink">
+            <ss-img [imageAsset]="discordLinkImageAsset"/>
+        </ss-anchor>
+        <div id="in-person-div">
+            <ss-title
+                    [text]="inPersonTitleText"
+                    [tagType]="TagType.H4"/>
+            <ss-paragraph discordTextHighlight
+                          [text]="inPersonDetailsText"/>
+        </div>
+    </fade-in-content>
 </ng-container>
