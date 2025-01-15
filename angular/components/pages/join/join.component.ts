@@ -7,6 +7,9 @@ import {
     discordTitleText, inPersonDetailsText, inPersonTitleText
 } from "../../../assets/joinAssets";
 import {discordElementLink} from "../../../assets/elementLinkAssets";
+import {
+    joinContentFadeInAnimationProperties
+} from "../../animations/animationProperties";
 
 @Component({
     selector: 'join',
@@ -25,4 +28,5 @@ export class JoinComponent {
     protected readonly inPersonTitleText = inPersonTitleText;
     protected readonly inPersonDetailsText = inPersonDetailsText;
     protected readonly discordElementLink = discordElementLink;
+    protected readonly joinContentFadeInAnimationProperties = joinContentFadeInAnimationProperties;
 }
