@@ -1,7 +1,11 @@
 // accordion.component.ts 
-import {Component, Input} from "@angular/core";
-import {plusIconImageAsset} from "../../../assets/imageAssets";
+import {Component, HostBinding, HostListener, Input} from "@angular/core";
+import {
+    ImageAsset, plusIconImageAsset,
+    whitePlusIconImageAsset
+} from "../../../assets/imageAssets";
 import {accordionPopAnimation} from "../../animations/animations";
+import {DelayService} from "../../../services/delay.service";
 
 @Component({
     selector: 'accordion',
@@ -12,13 +16,22 @@ import {accordionPopAnimation} from "../../animations/animations";
     ]
 })
 export class AccordionComponent {
-    @Input() title: string;
+    @Input() protected title: string;
     protected isExpanded = false;
-    constructor() {
+    @HostBinding('class.accordion-triggered') protected triggered: boolean;
+    constructor(private delayService: DelayService) {
         
     }
-    toggleExpansion() {
+    public toggleExpansion(): void {
         this.isExpanded = !this.isExpanded
     }
-    protected readonly plusIconImageAsset = plusIconImageAsset;
+    @HostListener('click')
+    public trigger(): void {
+        this.triggered = true;
+        this.toggleExpansion();
+        this.delayService.delay(500).then((): void => {
+            this.triggered = false;
+        });
+    }
+    protected readonly whitePlusIconImageAsset: ImageAsset = whitePlusIconImageAsset;
 }
