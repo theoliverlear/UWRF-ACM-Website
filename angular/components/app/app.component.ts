@@ -2,6 +2,8 @@ import {AfterViewInit, Component, Input, OnInit} from "@angular/core";
 import {ActivatedRoute, NavigationEnd, Router} from "@angular/router";
 import {filter, map, mergeMap} from "rxjs";
 import {globalParticles} from "../../assets/particleAssets";
+import {Meta} from "@angular/platform-browser";
+import {descriptionMeta, keywordsMeta} from "../../assets/metaAssets";
 declare var particlesJS: any;
 
 @Component({
@@ -12,13 +14,19 @@ declare var particlesJS: any;
 })
 export class AppComponent implements OnInit, AfterViewInit {
     title: string;
-    constructor(private router: Router, private activatedRoot: ActivatedRoute) {
+    constructor(private router: Router,
+                private activatedRoot: ActivatedRoute,
+                private metaService: Meta) {
         console.log('AppComponent loaded');
     }
     ngAfterViewInit() {
         particlesJS("particle-container", globalParticles);
     }
     ngOnInit() {
+        this.setMetadata();
+        this.initializeRouterEvents();
+    }
+    private initializeRouterEvents() {
         this.router.events.pipe(filter((event) => event instanceof NavigationEnd),
             map(() => this.activatedRoot),
             map((route) => {
@@ -32,5 +40,11 @@ export class AppComponent implements OnInit, AfterViewInit {
             const metaInfo = data['meta'] || {};
             this.title = metaInfo['title'] || 'Script Social';
         });
+    }
+    private setMetadata() {
+        this.metaService.addTags([
+            descriptionMeta,
+            keywordsMeta
+        ]);
     }
 }
