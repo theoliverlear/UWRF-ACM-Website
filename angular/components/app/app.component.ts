@@ -38,7 +38,7 @@ export class AppComponent implements OnInit, AfterViewInit {
             mergeMap((route) => route.data)
         ).subscribe((data) => {
             const metaInfo = data['meta'] || {};
-            this.title = metaInfo['title'] || 'Script Social';
+            this.title = metaInfo['title'] || 'UWRF ACM';
         });
     }
     private setMetadata() {
