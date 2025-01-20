@@ -48,6 +48,13 @@ import {
     TriviaCategoryComponent
 } from "./trivia-category/trivia-category.component";
 import {GuestSpeakerComponent} from "./guest-speaker/guest-speaker.component";
+import {SubtitleComponent} from "./subtitle/subtitle.component";
+import {
+    GuestSpeakerTopicComponent
+} from "./guest-speaker-topic/guest-speaker-topic.component";
+import {
+    GuestSpeakerTopicListComponent
+} from "./guest-speaker-topic-list/guest-speaker-topic-list.component";
 
 
 export const elements = [
@@ -58,6 +65,8 @@ export const elements = [
     FadeInOutContentComponent,
     FloatingContentComponent,
     GuestSpeakerComponent,
+    GuestSpeakerTopicComponent,
+    GuestSpeakerTopicListComponent,
     HomeAnchorComponent,
     LeetCodeExerciseComponent,
     LeetCodeProblemComponent,
@@ -72,6 +81,7 @@ export const elements = [
     SsInputComponent,
     SsParagraphComponent,
     SsTitleComponent,
+    SubtitleComponent,
     ThisWeekSubtitleComponent,
     ThisWeekTitleComponent,
     ThisWeekTitleContainerComponent,
