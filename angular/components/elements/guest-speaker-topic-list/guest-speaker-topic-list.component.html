@@ -1,0 +1,5 @@
+<!-- guest-speaker-topic-list.component.html -->
+<subtitle [tagType]="TagType.H5" [text]="'Topics:'" />
+<div class="topics-list">
+    <guest-speaker-topic *ngFor="let topic of topics" [topicTitle]="topic"/>
+</div>
