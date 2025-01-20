@@ -43,6 +43,11 @@ import {
     LeetCodeProblemHintComponent
 } from "./leetcode-problem-hint/leetcode-problem-hint.component";
 import {AccordionComponent} from "./accordion/accordion.component";
+import {TriviaComponent} from "./trivia/trivia.component";
+import {
+    TriviaCategoryComponent
+} from "./trivia-category/trivia-category.component";
+import {GuestSpeakerComponent} from "./guest-speaker/guest-speaker.component";
 
 
 export const elements = [
@@ -52,6 +57,7 @@ export const elements = [
     FadeInContentComponent,
     FadeInOutContentComponent,
     FloatingContentComponent,
+    GuestSpeakerComponent,
     HomeAnchorComponent,
     LeetCodeExerciseComponent,
     LeetCodeProblemComponent,
@@ -70,5 +76,7 @@ export const elements = [
     ThisWeekTitleComponent,
     ThisWeekTitleContainerComponent,
     TopicBubbleComponent,
+    TriviaCategoryComponent,
+    TriviaComponent,
     TypingTextComponent,
 ]
