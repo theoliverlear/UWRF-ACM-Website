@@ -5,5 +5,34 @@
 @import "../../../styles/global-placeholders";
 
 guest-speaker {
-
+    @include flex(space-around, center, column);
+    width: 80%;
+    .title-with-subtitle {
+        @include flex(center, center, column);
+        background-image: radial-gradient($alabaster-stone, $pristine-white);
+        padding: $one-percent;
+        margin: $one-percent 0;
+        @extend %soft-border-radius;
+        ss-title, subtitle {
+            color: $neutral-black;
+            text-align: center;
+            text-shadow: $neutral-black 0 0 $eighth-percent;
+        }
+    }
+    .guest-speaker-bio-image {
+        @include flex(space-around, center, row);
+        .guest-speaker-bio {
+            max-width: 40%;
+            ss-paragraph {
+                @extend %indented-text;
+            }
+        }
+        .guest-speaker-image {
+            max-width: 40%;
+            ss-img {
+                @include square-size($fifteen-percent);
+                @extend %soft-border-radius;
+            }
+        }
+    }
 }
