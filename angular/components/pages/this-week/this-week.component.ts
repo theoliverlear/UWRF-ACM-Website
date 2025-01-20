@@ -5,6 +5,7 @@ import {weekOneLeetCodeProblems} from "../../../assets/leetCodeAssets";
 import {
     thisWeekMeetingContentFadeInAnimationProperties
 } from "../../animations/animationProperties";
+import {shaneOMalleyPottingGuestSpeaker} from "../../../assets/guestSpeakerAssets";
 
 @Component({
     selector: 'this-week',
@@ -20,4 +21,5 @@ export class ThisWeekComponent {
     protected readonly nextMeetingPrompt = nextMeetingPrompt;
     protected readonly weekOneLeetCodeProblems = weekOneLeetCodeProblems;
     protected readonly thisWeekMeetingContentFadeInAnimationProperties = thisWeekMeetingContentFadeInAnimationProperties;
+    protected readonly shaneOMalleyPottingGuestSpeaker = shaneOMalleyPottingGuestSpeaker;
 }
