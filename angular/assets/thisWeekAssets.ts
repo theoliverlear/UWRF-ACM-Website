@@ -1,34 +1,47 @@
-export const firstMeetingTitle: [string, Date] = ["Say hey, hi, hello, welcome!",
-                                                  new Date('2025-02-06')];
-export const noMeetingTitle: [string, Date] = ["Nothing, we are not meeting this week.",
-                                                  new Date()];
-export const eventTitles: [string, Date][] = [
-    firstMeetingTitle
-];
-function getNextMeetingTitle(): [string, Date] {
+import {MeetingEventPrompt} from "../models/meetings/MeetingEventPrompt";
+import {
+    firstMeetingOfSemester,
+    readabilityMeeting,
+    shaneMeeting
+} from "./eventAssets";
+
+export const firstMeetingPrompt: MeetingEventPrompt = new MeetingEventPrompt(firstMeetingOfSemester,
+                                                                             "Say hey, hi, hello, welcome! Win a prize in trivia!");
+export const secondMeetingPrompt: MeetingEventPrompt = new MeetingEventPrompt(readabilityMeeting,
+                                                                              "Code quality, readability, and maintainability.");
+export const thirdMeetingPrompt: MeetingEventPrompt = new MeetingEventPrompt(shaneMeeting,
+                                                                             "Shane O'Malley-Potting talks to ACM");
+export const noMeetingPrompt: MeetingEventPrompt = new MeetingEventPrompt(null,
+                                                                          "Nothing, we are not meeting this week.");
+export const meetingEventPrompts: MeetingEventPrompt[] = [
+    firstMeetingPrompt,
+    secondMeetingPrompt,
+    thirdMeetingPrompt,
+    noMeetingPrompt
+]
+function getNextMeetingTitle(): MeetingEventPrompt {
     if (!hasMeetingThisWeek()) {
-        return noMeetingTitle;
+        return noMeetingPrompt;
     }
-    const now = new Date();
-    const upcomingEvents: [string, Date][] = eventTitles.filter((event: [string, Date]): boolean => {
-        return event[1] > now;
-    });
-    let hasUpcomingEvents: boolean = upcomingEvents.length > 0;
-    if (hasUpcomingEvents) {
-        upcomingEvents.sort((currentMeeting: [string, Date], nextMeeting: [string, Date]): number => {
-            let meetingTimeDifference: number = currentMeeting[1].getTime() - nextMeeting[1].getTime();
-            return meetingTimeDifference;
-        });
-        return upcomingEvents[0];
-    } else {
-        return null;
+    const currentDate: Date = new Date();
+    for (const event of meetingEventPrompts) {
+        if (!event.meetingEvent) {
+            continue;
+        }
+        if (event.meetingEvent.eventDate.getTime() > currentDate.getTime()) {
+            return event;
+        }
     }
 }
 function hasMeetingThisWeek(): boolean {
+    // TODO: Create time enum constants
     const oneWeekInMilliseconds: number = 7 * 24 * 60 * 60 * 1000;
     const today: number = new Date().getTime();
-    for (const event of eventTitles) {
-        const eventDate: number = event[1].getTime();
+    for (const event of meetingEventPrompts) {
+        if (!event.meetingEvent) {
+            continue;
+        }
+        const eventDate: number = event.meetingEvent.eventDate.getTime();
         const isFutureEvent: boolean = eventDate > today;
         const isWithinOneWeek: boolean = eventDate <= today + oneWeekInMilliseconds;
         if (isFutureEvent && isWithinOneWeek) {
@@ -37,4 +50,4 @@ function hasMeetingThisWeek(): boolean {
     }
     return false;
 }
-export const nextMeetingTitle: [string, Date] = getNextMeetingTitle();
+export const nextMeetingPrompt: MeetingEventPrompt = getNextMeetingTitle();
