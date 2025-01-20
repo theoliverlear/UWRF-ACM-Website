@@ -21,31 +21,34 @@
                 [tagType]="TagType.H1"
                 [text]="promoTextAcronym"/>
     </fade-in-out-content>
-    <fade-in-out-content *ngIf="showWhatAcmDoes" [fadeInOutAnimationProperties]="whatAcmDoesContentFadeInOutAnimationProperties">
-        <fade-in-content *ngIf="showAcmActionsList" [animationProperties]="quickFadeInAnimationProperties">
+    <fade-in-out-content class="acm-actions-list"
+                         *ngIf="showWhatAcmDoes"
+                         [fadeInOutAnimationProperties]="whatAcmDoesContentFadeInOutAnimationProperties">
+        <fade-in-content *ngIf="showAcmActionsList"
+                         [animationProperties]="quickFadeInAnimationProperties">
             <typing-text *ngIf="showAcmActionsList"
                          [textToType]="promoTextMeetProfessions"
                          [typeSpeed]="TypeSpeed.FAST"
                          [applyBeingTypedStyle]="true"
                          [tagType]="TagType.H4"
                          [enableBlinkingCursor]="false"
-            [hideBeingTypedClass]="true"/>
-            <typing-text
-                         *ngIf="showLearnSoftware"
-                         [textToType]="promoTextSoftwareDevelopment"
-                         [tagType]="TagType.H4"
-                         [typeSpeed]="TypeSpeed.FAST"
-                         [applyBeingTypedStyle]="true"
-                         [enableBlinkingCursor]="false"
                          [hideBeingTypedClass]="true"/>
             <typing-text
-                         *ngIf="showBuildTech"
-                         [textToType]="promoTextBuildTech"
-                         [tagType]="TagType.H4"
-                         [typeSpeed]="TypeSpeed.FAST"
-                         [applyBeingTypedStyle]="true"
-                         [enableBlinkingCursor]="false"
-                         [hideBeingTypedClass]="true"/>
+                    *ngIf="showLearnSoftware"
+                    [textToType]="promoTextSoftwareDevelopment"
+                    [tagType]="TagType.H4"
+                    [typeSpeed]="TypeSpeed.FAST"
+                    [applyBeingTypedStyle]="true"
+                    [enableBlinkingCursor]="false"
+                    [hideBeingTypedClass]="true"/>
+            <typing-text
+                    *ngIf="showBuildTech"
+                    [textToType]="promoTextBuildTech"
+                    [tagType]="TagType.H4"
+                    [typeSpeed]="TypeSpeed.FAST"
+                    [applyBeingTypedStyle]="true"
+                    [enableBlinkingCursor]="false"
+                    [hideBeingTypedClass]="true"/>
             <typing-text
                     *ngIf="showFormFriendships"
                     [textToType]="promoTextFormFriendships"
