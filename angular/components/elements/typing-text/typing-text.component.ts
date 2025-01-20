@@ -21,6 +21,8 @@ export class TypingTextComponent implements AfterViewInit {
     @Input() applyBeingTypedStyle: boolean = false;
     @Input() typeOnLoad: boolean = true;
     @ViewChild('typedText', {static: false}) typedText: ElementRef;
+    @Input() enableBlinkingCursor: boolean = true;
+    @Input() hideBeingTypedClass: boolean = false;
     useBlinkingCursor: boolean = false;
     finishedTyping: boolean = false;
     constructor(private renderer: Renderer2) {
@@ -28,7 +30,7 @@ export class TypingTextComponent implements AfterViewInit {
     }
 
     shouldBlink() {
-        return this.useBlinkingCursor;
+        return this.useBlinkingCursor && this.enableBlinkingCursor;
     }
 
     async toggleBlinkingClass(): Promise<void> {
@@ -38,6 +40,9 @@ export class TypingTextComponent implements AfterViewInit {
         } else {
             this.renderer.removeClass(this.typedText.nativeElement, 'blinking-cursor');
             this.renderer.addClass(this.typedText.nativeElement, 'being-typed');
+        }
+        if (this.hideBeingTypedClass) {
+            this.renderer.removeClass(this.typedText.nativeElement, 'being-typed');
         }
     }
     delay(ms: number): Promise<void> {
