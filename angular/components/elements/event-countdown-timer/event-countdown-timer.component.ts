@@ -1,5 +1,5 @@
 // event-countdown-timer.component.ts 
-import {Component, Input, OnInit} from "@angular/core";
+import {ChangeDetectorRef, Component, Input, OnInit} from "@angular/core";
 import {DateInterval} from "./models/DateInterval";
 
 @Component({
@@ -9,8 +9,10 @@ import {DateInterval} from "./models/DateInterval";
 })
 export class EventCountdownTimerComponent implements OnInit {
     @Input() eventDate: Date;
+    readonly meetingDurationInMinutes: number = 120;
+    isDuringEvent: boolean = false;
     remainingTime: number;
-    constructor() {
+    constructor(private changeDetector: ChangeDetectorRef) {
         
     }
     ngOnInit() {
@@ -19,12 +21,19 @@ export class EventCountdownTimerComponent implements OnInit {
     }
     updateTime() {
         const currentTime: number = new Date().getTime();
-        const targetTime: number = this.eventDate.getTime();
-        const remainingTime: number = (targetTime - currentTime) / 1000;
-        this.remainingTime = remainingTime;
+        const eventStartTime: number = this.eventDate.getTime();
+        const eventEndTime: number = eventStartTime + this.meetingDurationInMinutes * 60 * 1000;
+        this.remainingTime = (eventEndTime - currentTime) / 1000;
+        this.setEventIsNow(currentTime, eventStartTime, eventEndTime);
+        this.changeDetector.detectChanges();
+    }
+    setEventIsNow(currentTime: number,
+                  eventStartTime: number,
+                  eventEndTime: number): void {
+        this.isDuringEvent = currentTime >= eventStartTime && currentTime <= eventEndTime;
     }
     isNow() {
-        return this.remainingTime <= 0;
+        return this.isDuringEvent;
     }
     protected readonly DateInterval = DateInterval;
 }
