@@ -1,0 +1,13 @@
+// guest-speaker-topic-style.component.scss
+@import "../../../styles/global-variables";
+@import "../../../styles/global-mixins";
+@import "../../../styles/global-functions";
+@import "../../../styles/global-placeholders";
+
+guest-speaker-topic {
+    @include flex(center, center, row);
+    padding: $half-percent;
+    margin: $one-percent;
+    @extend %soft-border-radius;
+    background-image: radial-gradient($alabaster-stone, $pristine-white);
+}
