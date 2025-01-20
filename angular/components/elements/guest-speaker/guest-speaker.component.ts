@@ -11,8 +11,10 @@ import {TagType} from "../../../models/html/TagType";
 export class GuestSpeakerComponent {
     @Input() speaker: GuestSpeaker;
     constructor() {
-        
-    }
 
+    }
+    public hasImage(): boolean {
+        return this.speaker.imageAsset !== undefined;
+    }
     protected readonly TagType = TagType;
 }
