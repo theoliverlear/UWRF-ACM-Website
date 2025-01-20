@@ -1,27 +1,36 @@
 import {
     MeetingEvent
-} from "../components/elements/event-popup/models/MeetingEvent";
+} from "../models/meetings/MeetingEvent";
 
-export const firstMeetingOfSemester: MeetingEvent = new MeetingEvent('First Meeting of Semester', new Date('2025-02-09'), 'South Hall 21 and Virtually In Discord');
-
-export const lastMeetingOfSemester: MeetingEvent = new MeetingEvent('Last Meeting of Semester', new Date('2025-05-15'), 'South Hall 21 and Virtually In Discord');
+const defaultAcmMeetingPlace = 'South Hall 21 and Virtually In Discord';
+export const firstMeetingOfSemester: MeetingEvent = new MeetingEvent('First Meeting of Semester',
+                                                                     getMeetingDateTime('2025-02-06'),
+                                                                     defaultAcmMeetingPlace);
+export const readabilityMeeting: MeetingEvent = new MeetingEvent("Code quality and readability seminar",
+                                                                 getMeetingDateTime('2025-02-13'),
+                                                                defaultAcmMeetingPlace);
+export const shaneMeeting: MeetingEvent = new MeetingEvent('Shane O\'Malley Potting talks to ACM',
+                                                                    getMeetingDateTime('2025-02-20'),
+                                                                    defaultAcmMeetingPlace);
+export const lastMeetingOfSemester: MeetingEvent = new MeetingEvent('Last Meeting of Semester',
+                                                                    getMeetingDateTime('2025-05-08'),
+                                                                    defaultAcmMeetingPlace);
 const meetingEventList: MeetingEvent[] = [
     firstMeetingOfSemester,
+    readabilityMeeting,
     lastMeetingOfSemester,
 ];
+function getMeetingDateTime(dateString: string) {
+    return new Date(`${dateString}T16:30:00`);
+}
 function getNextMeetingEvent(): MeetingEvent {
-    const now = new Date();
-    const upcomingEvents: MeetingEvent[] = meetingEventList.filter((event: MeetingEvent): boolean => {
-        return event.eventDate > now;
-    });
-    if (upcomingEvents.length > 0) {
-        upcomingEvents.sort((currentMeeting: MeetingEvent, nextMeeting: MeetingEvent): number => {
-            return currentMeeting.eventDate.getTime() - nextMeeting.eventDate.getTime();
-        });
-        return upcomingEvents[0];
-    } else {
-        return null;
+    let closestEvent: MeetingEvent = meetingEventList[0];
+    for (const event of meetingEventList) {
+        if (event.eventDate.getTime() < closestEvent.eventDate.getTime()) {
+            closestEvent = event;
+        }
     }
+    return closestEvent;
 }
 export const nextEvent: MeetingEvent = getNextMeetingEvent();
 
