@@ -1,4 +1,16 @@
 <!-- guest-speaker.component.html -->
 <ng-container>
-    <ss-title [text]="speaker.getFullName()" [tagType]="TagType.H3"/>
+    <div class="title-with-subtitle">
+        <ss-title [text]="speaker.getFullName()" [tagType]="TagType.H3"/>
+        <subtitle [tagType]="TagType.H5" [text]="speaker.jobTitle"/>
+    </div>
+    <div class="guest-speaker-bio-image">
+        <div class="guest-speaker-bio">
+            <ss-paragraph [text]="speaker.description"/>
+        </div>
+        <div class="guest-speaker-image">
+            <ss-img [imageAsset]="speaker.imageAsset"/>
+        </div>
+    </div>
+    <guest-speaker-topic-list [topics]="speaker.topics" />
 </ng-container>
