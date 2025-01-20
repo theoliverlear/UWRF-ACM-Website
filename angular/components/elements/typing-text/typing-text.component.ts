@@ -48,7 +48,6 @@ export class TypingTextComponent implements AfterViewInit {
     delay(ms: number): Promise<void> {
         return new Promise((resolve) => setTimeout(resolve, ms));
     }
-    protected readonly TagType = TagType;
     ngAfterViewInit() {
         if (this.typeOnLoad) {
             this.typeText().then(()=> {
@@ -113,4 +112,5 @@ export class TypingTextComponent implements AfterViewInit {
             deleteChar();
         });
     }
+    protected readonly TagType = TagType;
 }
