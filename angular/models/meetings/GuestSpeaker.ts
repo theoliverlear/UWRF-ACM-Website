@@ -5,17 +5,22 @@ export class GuestSpeaker {
     public lastName: string;
     public topics: string[];
     public description: string;
+    public jobTitle?: string;
     public imageAsset?: ImageAsset;
     public constructor(firstName: string,
                        lastName: string,
                        topics: string[],
-                       imageAsset?: ImageAsset) {
+                       description: string,
+                       imageAsset?: ImageAsset,
+                       jobTitle?: string) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.topics = topics;
+        this.description = description;
         this.imageAsset = imageAsset;
+        this.jobTitle = jobTitle;
     }
-    public getFullName() {
+    public getFullName(): string {
         return `${this.firstName} ${this.lastName}`;
     }
 }
