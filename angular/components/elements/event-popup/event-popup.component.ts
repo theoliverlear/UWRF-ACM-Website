@@ -1,6 +1,6 @@
 // event-popup.component.ts 
 import {Component, Input} from "@angular/core";
-import {MeetingEvent} from "./models/MeetingEvent";
+import {MeetingEvent} from "../../../models/meetings/MeetingEvent";
 import {nextEvent} from "../../../assets/eventAssets";
 
 @Component({
