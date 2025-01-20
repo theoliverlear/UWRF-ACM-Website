@@ -2,6 +2,10 @@ import {FadeInOutProperties} from "./models/FadeInOutProperties";
 import {ScaleProperties} from "./models/ScaleProperties";
 import {FadeInProperties} from "./models/FadeInProperties";
 
+export const quickFadeInAnimationProperties: FadeInProperties = {
+    duration: '300ms',
+    delay: '0ms'
+};
 export const acmTitleFadeInOutAnimationProperties: FadeInOutProperties = {
     fadeInDuration: '600ms',
     waitDuration: '1500ms',
@@ -35,4 +39,9 @@ export const homeEventPopupFadeInAnimationProperties: FadeInProperties = {
 export const joinContentFadeInAnimationProperties: FadeInProperties = {
     duration: '300ms',
     delay: '25ms'
+};
+export const whatAcmDoesContentFadeInOutAnimationProperties: FadeInOutProperties = {
+    fadeInDuration: '300ms',
+    waitDuration: '0ms',
+    fadeOutDuration: '300ms'
 };
