@@ -1,6 +1,6 @@
 // this-week.component.ts 
 import {Component, Input} from "@angular/core";
-import {nextMeetingTitle} from "../../../assets/thisWeekAssets";
+import {nextMeetingPrompt} from "../../../assets/thisWeekAssets";
 import {weekOneLeetCodeProblems} from "../../../assets/leetCodeAssets";
 import {
     thisWeekMeetingContentFadeInAnimationProperties
@@ -17,7 +17,7 @@ export class ThisWeekComponent {
         
     }
 
-    protected readonly nextMeetingTitle = nextMeetingTitle;
+    protected readonly nextMeetingPrompt = nextMeetingPrompt;
     protected readonly weekOneLeetCodeProblems = weekOneLeetCodeProblems;
     protected readonly thisWeekMeetingContentFadeInAnimationProperties = thisWeekMeetingContentFadeInAnimationProperties;
 }
