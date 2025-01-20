@@ -6,6 +6,9 @@ export interface ImageAsset {
 export function getImagePath(fileName: string): string {
     return imageAssetPath + fileName;
 }
+export function getGuestSpeakerImagePath(fileName: string): string {
+    return guestSpeakersImageAssetPath + fileName;
+}
 export function getLogoImagePath(fileName: string): string {
     return logoImageAssetPath + fileName;
 }
@@ -14,6 +17,7 @@ export function getIconImagePath(fileName: string): string {
 }
 
 const imageAssetPath: string = 'assets/images/';
+const guestSpeakersImageAssetPath: string = imageAssetPath + 'guest_speakers/';
 const logoImageAssetPath: string = imageAssetPath + 'logo/';
 const iconImageAssetPath: string = imageAssetPath + 'icon/';
 
@@ -32,4 +36,16 @@ export const plusIconImageAsset: ImageAsset = {
 export const whitePlusIconImageAsset: ImageAsset = {
     src: getIconImagePath('white_plus_icon.svg'),
     alt: 'White Plus Icon'
+};
+export const shaneOMalleyPottingImageAsset: ImageAsset = {
+    src: getGuestSpeakerImagePath('shane_o_malley_potting.jpg'),
+    alt: 'Shane O Malley-Potting'
+};
+export const ethanPriceImageAsset: ImageAsset = {
+    src: getGuestSpeakerImagePath('ethan_price.jpg'),
+    alt: 'Ethan Price'
+};
+export const samChapinImageAsset: ImageAsset = {
+    src: getGuestSpeakerImagePath('sam_chapin.jpg'),
+    alt: 'Sam Chapin'
 };
