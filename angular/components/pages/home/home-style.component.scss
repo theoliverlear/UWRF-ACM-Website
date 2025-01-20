@@ -22,4 +22,10 @@ home {
         position: absolute;
         top: $five-percent;
     }
+    .acm-actions-list {
+        @include flex(center, center, column);
+        typing-text {
+            margin: $half-percent 0;
+        }
+    }
 }
