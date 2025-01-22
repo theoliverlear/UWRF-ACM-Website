@@ -46,52 +46,53 @@ export class HomeComponent implements AfterViewInit{
     ngAfterViewInit(): void {
         this.promoSequenceLoop();
     }
-    promoSequenceLoop() {
-        this.promoSequence().then(() => {
-
-        });
+    private async promoSequenceLoop() {
+        await this.promoSequence();
+        await this.delayService.delay(5000);
+        await this.reset();
+        await this.delayService.delay(2500);
+        await this.promoSequenceLoop();
     }
-    promoSequence(): Promise<void> {
-        return this.typeIntroText().then(() => {
-            this.setBlinkingCursor(true, true);
-            this.delayService.delay(2000).then(() => {
-                this.replaceIntroText().then(() => {
-                    this.writeNameText().then(() => {
-                        this.delayService.delay(6000).then(() => {
-                            this.showAcronym = false;
-                            this.setBlinkingCursor(true, true);
-                            this.topTypingText.deleteText().then(() => {
-                                this.delayService.delay(500).then(() => {
-                                    this.topTypingText.textToType = promoTextWhatAcmDoesPrompt;
-                                    this.topTypingText.typeText().then(() => {
-                                        console.log('what acm does');
-                                        this.showWhatAcmDoes = true;
-                                        this.showAcmActionsList = true;
-                                        this.delayService.delay(2500).then(() => {
-                                            this.showLearnSoftware = true;
-                                            this.delayService.delay(2750).then(() => {
-                                                this.showBuildTech = true;
-                                                this.delayService.delay(2750).then(() => {
-                                                    this.showFormFriendships = true;
-                                                });
-                                            });
-                                        });
-                                    });
-                                });
-                            })
-                        });
-                    });
-                });
-            });
-        });
+    async promoSequence(): Promise<void> {
+        await this.typeIntroText();
+        await this.replaceIntroText();
+        await this.writeNameText();
+        await this.delayService.delay(7000);
+        this.showAcronym = false;
+        this.setBlinkingCursor(true, true);
+        await this.topTypingText.deleteText();
+        await this.delayService.delay(500);
+        await this.delayService.delay(1000);
+        this.topTypingText.textToType = promoTextWhatAcmDoesPrompt;
+        await this.topTypingText.typeText();
+        await this.delayService.delay(2000);
+        this.showWhatAcmDoes = true;
+        this.showAcmActionsList = true;
+        await this.delayService.delay(2400);
+        this.showLearnSoftware = true;
+        await this.delayService.delay(2750);
+        this.showBuildTech = true;
+        await this.delayService.delay(2750);
+        this.showFormFriendships = true;
     }
-    protected typeIntroText(): Promise<void> {
-        return this.topTypingText.typeText();
+    protected async reset(): Promise<void> {
+        await this.topTypingText.deleteText();
+        this.topTypingText.textToType = promoTextFullTitle
+        this.showAcronym = false;
+        this.showWhatAcmDoes = false;
+        this.showAcmActionsList = false;
+        this.showLearnSoftware = false;
+        this.showBuildTech = false;
+        this.showFormFriendships = false;
     }
-    protected replaceIntroText() {
-        return this.topTypingText.deleteText().then(() => {
-            this.topTypingText.textToType = promoTextCallUs;
-        });
+    protected async typeIntroText(): Promise<void> {
+        await this.topTypingText.typeText();
+        this.setBlinkingCursor(true, true);
+        await this.delayService.delay(2000);
+    }
+    protected async replaceIntroText(): Promise<void> {
+        await this.topTypingText.deleteText();
+        this.topTypingText.textToType = promoTextCallUs;
     }
     protected writeNameText(): Promise<void> {
         return this.topTypingText.typeText().then(() => {
