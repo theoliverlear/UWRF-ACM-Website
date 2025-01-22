@@ -2,6 +2,9 @@ import {
     SuccessStoryMessage
 } from "../components/elements/success-story/models/SuccessStoryMessage";
 import {randyFranzmeierImageAsset} from "./imageAssets";
+import {
+    SuccessStory
+} from "../components/elements/success-story/models/SuccessStory";
 
 export const randyFranzmeierSuccessStory = new SuccessStoryMessage(
     'Randy Franzmeier',
@@ -15,3 +18,6 @@ export const randyFranzmeierSuccessStory = new SuccessStoryMessage(
     'grateful for the opportunity to work with such a great team.',
     randyFranzmeierImageAsset
 );
+export const successStories: SuccessStory[] = [
+    randyFranzmeierSuccessStory
+];
