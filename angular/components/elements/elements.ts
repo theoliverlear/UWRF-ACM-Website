@@ -61,6 +61,8 @@ import {TriviaPrizeComponent} from "./trivia-prize/trivia-prize.component";
 import {
     TriviaPrizeListComponent
 } from "./trivia-prize-list/trivia-prize-list.component";
+import {SuccessStoryComponent} from "./success-story/success-story.component";
+import {QuoteComponent} from "./quote/quote.component";
 
 
 export const elements = [
@@ -80,6 +82,7 @@ export const elements = [
     LeetCodeProblemHintComponent,
     NavBarComponent,
     NavItemComponent,
+    QuoteComponent,
     SsAnchorComponent,
     SsButtonComponent,
     SsCodeComponent,
@@ -90,13 +93,14 @@ export const elements = [
     SsParagraphComponent,
     SsTitleComponent,
     SubtitleComponent,
+    SuccessStoryComponent,
     ThisWeekSubtitleComponent,
     ThisWeekTitleComponent,
     ThisWeekTitleContainerComponent,
     TopicBubbleComponent,
-    TriviaTopicComponent,
     TriviaComponent,
     TriviaPrizeComponent,
     TriviaPrizeListComponent,
+    TriviaTopicComponent,
     TypingTextComponent,
 ]
