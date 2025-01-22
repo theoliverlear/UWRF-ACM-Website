@@ -5,7 +5,7 @@
 @import "../../../styles/global-placeholders";
 
 floating-content {
-    @include flex(center, center, row);
+    @include flex(center, center, column);
     animation: float 16s ease-in-out infinite;
 
 
