@@ -63,6 +63,9 @@ import {
 } from "./trivia-prize-list/trivia-prize-list.component";
 import {SuccessStoryComponent} from "./success-story/success-story.component";
 import {QuoteComponent} from "./quote/quote.component";
+import {
+    SuccessStoryListComponent
+} from "./success-story-list/success-story-list.component";
 
 
 export const elements = [
@@ -94,6 +97,7 @@ export const elements = [
     SsTitleComponent,
     SubtitleComponent,
     SuccessStoryComponent,
+    SuccessStoryListComponent,
     ThisWeekSubtitleComponent,
     ThisWeekTitleComponent,
     ThisWeekTitleContainerComponent,
