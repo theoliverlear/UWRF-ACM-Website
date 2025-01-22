@@ -92,3 +92,8 @@ body {
         filter: blur(1px) brightness(1.2);
     }
 }
+hr {
+    width: 80%;
+    border: $thinnest-border solid $pristine-white;
+    border-image: radial-gradient(at center, $alabaster-stone 30%, $charcoal) 1;
+}
