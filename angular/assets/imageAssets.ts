@@ -9,15 +9,18 @@ export function getImagePath(fileName: string): string {
 export function getGuestSpeakerImagePath(fileName: string): string {
     return guestSpeakersImageAssetPath + fileName;
 }
+export function getSuccessStoryImagePath(fileName: string): string {
+    return successStoryImageAssetPath + fileName;
+}
 export function getLogoImagePath(fileName: string): string {
     return logoImageAssetPath + fileName;
 }
 export function getIconImagePath(fileName: string): string {
     return iconImageAssetPath + fileName;
 }
-
 const imageAssetPath: string = 'assets/images/';
 const guestSpeakersImageAssetPath: string = imageAssetPath + 'guest_speakers/';
+const successStoryImageAssetPath: string = imageAssetPath + 'success_stories/';
 const logoImageAssetPath: string = imageAssetPath + 'logo/';
 const iconImageAssetPath: string = imageAssetPath + 'icon/';
 
@@ -60,4 +63,8 @@ export const bookIcon: ImageAsset = {
 export const giftIcon: ImageAsset = {
     src: getIconImagePath('gift_icon.png'),
     alt: 'Gift Icon'
+};
+export const randyFranzmeierImageAsset: ImageAsset = {
+    src: getSuccessStoryImagePath('randy_franzmeier.jpg'),
+    alt: 'Randy Franzmeier'
 };
