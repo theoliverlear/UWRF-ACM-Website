@@ -6,6 +6,7 @@ import {
     thisWeekMeetingContentFadeInAnimationProperties
 } from "../../animations/animationProperties";
 import {shaneOMalleyPottingGuestSpeaker} from "../../../assets/guestSpeakerAssets";
+import {weekOneTriviaGames} from "../../../assets/images/triviaAssets";
 
 @Component({
     selector: 'this-week',
@@ -22,4 +23,5 @@ export class ThisWeekComponent {
     protected readonly weekOneLeetCodeProblems = weekOneLeetCodeProblems;
     protected readonly thisWeekMeetingContentFadeInAnimationProperties = thisWeekMeetingContentFadeInAnimationProperties;
     protected readonly shaneOMalleyPottingGuestSpeaker = shaneOMalleyPottingGuestSpeaker;
+    protected readonly weekOneTriviaGames = weekOneTriviaGames;
 }
