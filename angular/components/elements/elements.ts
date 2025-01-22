@@ -45,8 +45,8 @@ import {
 import {AccordionComponent} from "./accordion/accordion.component";
 import {TriviaComponent} from "./trivia/trivia.component";
 import {
-    TriviaCategoryComponent
-} from "./trivia-category/trivia-category.component";
+    TriviaTopicComponent
+} from "./trivia-topic/trivia-topic.component";
 import {GuestSpeakerComponent} from "./guest-speaker/guest-speaker.component";
 import {SubtitleComponent} from "./subtitle/subtitle.component";
 import {
@@ -55,10 +55,17 @@ import {
 import {
     GuestSpeakerTopicListComponent
 } from "./guest-speaker-topic-list/guest-speaker-topic-list.component";
+import {CodeSnippetComponent} from "./code-snippet/code-snippet.component";
+import {SsCodeComponent} from "./ss-code/ss-code.component";
+import {TriviaPrizeComponent} from "./trivia-prize/trivia-prize.component";
+import {
+    TriviaPrizeListComponent
+} from "./trivia-prize-list/trivia-prize-list.component";
 
 
 export const elements = [
     AccordionComponent,
+    CodeSnippetComponent,
     EventCountdownTimerComponent,
     EventPopupComponent,
     FadeInContentComponent,
@@ -75,6 +82,7 @@ export const elements = [
     NavItemComponent,
     SsAnchorComponent,
     SsButtonComponent,
+    SsCodeComponent,
     SsFooterComponent,
     SsHeadComponent,
     SsImgComponent,
@@ -86,7 +94,9 @@ export const elements = [
     ThisWeekTitleComponent,
     ThisWeekTitleContainerComponent,
     TopicBubbleComponent,
-    TriviaCategoryComponent,
+    TriviaTopicComponent,
     TriviaComponent,
+    TriviaPrizeComponent,
+    TriviaPrizeListComponent,
     TypingTextComponent,
 ]
