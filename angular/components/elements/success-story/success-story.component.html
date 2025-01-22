@@ -1,0 +1,16 @@
+<!-- success-story.component.html -->
+<ng-container>
+    <div class="name-title-div">
+        <ss-title class="success-story-name" [text]="this.successStory.name" [tagType]="TagType.H3"/>
+        <subtitle [text]="this.successStory.title" [tagType]="TagType.H4"/>
+        <subtitle [text]="this.successStory.company" [tagType]="TagType.H5"/>
+    </div>
+    <div class="story-div">
+        <ss-paragraph [text]="successStory.successStoryText"/>
+        <ss-img [imageAsset]="randyFranzmeierImageAsset"/>
+    </div>
+    <quote *ngIf="hasMessage()"
+           [quoteText]="successStory.message"
+           [quotee]="successStory.name"/>
+    <hr/>
+</ng-container>
