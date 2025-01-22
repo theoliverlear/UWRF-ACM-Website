@@ -6,7 +6,7 @@ import {
     thisWeekMeetingContentFadeInAnimationProperties
 } from "../../animations/animationProperties";
 import {shaneOMalleyPottingGuestSpeaker} from "../../../assets/guestSpeakerAssets";
-import {weekOneTriviaGames} from "../../../assets/images/triviaAssets";
+import {weekOneTriviaGames} from "../../../assets/triviaAssets";
 
 @Component({
     selector: 'this-week',
