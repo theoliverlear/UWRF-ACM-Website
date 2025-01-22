@@ -1,5 +1,9 @@
 // dev-team.component.ts 
 import { Component } from "@angular/core";
+import {
+    successStories
+} from "../../../assets/successStoryAssets";
+import {TagType} from "../../../models/html/TagType";
 
 @Component({
     selector: 'dev-team',
@@ -10,4 +14,7 @@ export class DevTeamComponent {
     constructor() {
         
     }
+
+    protected readonly TagType = TagType;
+    protected readonly successStories = successStories;
 }
