@@ -1,4 +1,4 @@
-# Welcome to the UWRF Association of Computing Machinery (ACM)! 🎉💻
+# Welcome to the UWRF Association for Computing Machinery (ACM)! 🎉💻
 
 The University of Wisconsin - River Falls chapter of the ACM is the place to
 be for tech enthusiasts, budding programmers, and anyone interested in the 
