@@ -4,6 +4,7 @@ import {
     readabilityMeeting,
     shaneMeeting
 } from "./eventAssets";
+import {TimeConversion} from "../models/TimeConversion";
 
 export const firstMeetingPrompt: MeetingEventPrompt = new MeetingEventPrompt(firstMeetingOfSemester,
                                                                              "Say hey, hi, hello, welcome! Win a prize in trivia!");
@@ -33,9 +34,15 @@ function getNextMeetingTitle(): MeetingEventPrompt {
         }
     }
 }
+function getOneWeekInMilliseconds(): number {
+    return TimeConversion.DAYS_IN_WEEK *
+           TimeConversion.HOURS_IN_DAY *
+           TimeConversion.MINUTES_IN_HOUR *
+           TimeConversion.SECONDS_IN_MINUTE *
+           TimeConversion.MILLIS_IN_SECOND;
+}
 function hasMeetingThisWeek(): boolean {
-    // TODO: Create time enum constants
-    const oneWeekInMilliseconds: number = 7 * 24 * 60 * 60 * 1000;
+    const oneWeekInMilliseconds: number = getOneWeekInMilliseconds();
     const today: number = new Date().getTime();
     for (const event of meetingEventPrompts) {
         if (!event.meetingEvent) {
