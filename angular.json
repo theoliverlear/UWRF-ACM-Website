@@ -54,6 +54,7 @@
               "angular/components/elements/ss-paragraph/ss-paragraph-style.component.css",
               "angular/components/elements/ss-title/ss-title-style.component.css",
               "angular/components/elements/subtitle/subtitle-style.component.css",
+              "angular/components/elements/success-story-list/success-story-list-style.component.css",
               "angular/components/elements/success-story/success-story-style.component.css",
               "angular/components/elements/this-week-subtitle/this-week-subtitle-style.component.css",
               "angular/components/elements/this-week-title-container/this-week-title-container-style.component.css",
