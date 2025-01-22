@@ -1,0 +1,41 @@
+// success-story-style.component.scss
+@import "../../../styles/global-variables";
+@import "../../../styles/global-mixins";
+@import "../../../styles/global-functions";
+@import "../../../styles/global-placeholders";
+
+success-story {
+    @include flex(center, center, column);
+    max-width: 80%;
+    width: $fifty-percent;
+    margin: $one-percent 0;
+    @extend %soft-border-radius;
+    padding: $one-percent;
+    background-color: $faded-alabaster-stone;
+    .name-title-div {
+        @include flex(center, center, column);
+        max-width: 80%;
+        .success-story-name {
+            text-decoration: underline;
+        }
+    }
+    .story-div {
+        margin: $one-percent 0;
+        @include flex(center, center, row);
+        width: 100%;
+        ss-img {
+            @include square-size($ten-percent);
+            border: $thin-border solid $falcon-red;
+            @extend %soft-border-radius;
+            box-shadow: 0 0 $one-percent 0 black;
+        }
+        ss-paragraph {
+            width: $twenty-percent;
+            margin-right: $two-percent;
+        }
+    }
+    quote {
+        width: $thirty-percent;
+        margin: 0 0 $one-percent 0;
+    }
+}
