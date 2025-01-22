@@ -5,5 +5,21 @@
 @import "../../../styles/global-placeholders";
 
 trivia {
-
+    @include flex(center, center, column);
+    @extend %soft-border-radius;
+    padding: $one-percent;
+    width: $thirty-percent;
+    margin: $two-percent 0;
+    background-image: radial-gradient(circle, $charcoal 50%, $light-charcoal);
+    .trivia-title-div {
+        @include flex(center, center, column);
+        ss-paragraph {
+            max-width: 65%;
+        }
+        ss-title {
+            text-align: center;
+            text-decoration: underline;
+            margin: $quarter-percent 0;
+        }
+    }
 }
