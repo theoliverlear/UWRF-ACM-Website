@@ -49,3 +49,15 @@ export const samChapinImageAsset: ImageAsset = {
     src: getGuestSpeakerImagePath('sam_chapin.jpg'),
     alt: 'Sam Chapin'
 };
+export const candyIcon: ImageAsset = {
+    src: getIconImagePath('candy_icon.svg'),
+    alt: 'Candy Icon'
+};
+export const bookIcon: ImageAsset = {
+    src: getIconImagePath('book_icon.png'),
+    alt: 'Book Icon'
+};
+export const giftIcon: ImageAsset = {
+    src: getIconImagePath('gift_icon.png'),
+    alt: 'Gift Icon'
+};
