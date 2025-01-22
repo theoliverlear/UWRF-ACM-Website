@@ -1,1 +1,11 @@
 <!-- trivia.component.html -->
+<ng-container>
+    <div class="trivia-title-div">
+        <trivia-topic [triviaTopic]="triviaGame.topic"/>
+        <ss-paragraph [text]="triviaGame.description"/>
+    </div>
+    <div>
+        <ss-title [text]="'Trivia Prizes'" [tagType]="TagType.H3"/>
+        <trivia-prize-list [triviaPrizes]="triviaGame.triviaPrizes"/>
+    </div>
+</ng-container>
