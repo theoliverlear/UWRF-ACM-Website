@@ -34,7 +34,7 @@ export const homeRoute: Route = {
     component: HomeComponent,
     data: {
         meta: {
-            title: 'UWRF Association of Computing Machinery',
+            title: 'UWRF Association for Computing Machinery',
         },
     }
 };
