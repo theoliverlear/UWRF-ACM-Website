@@ -66,11 +66,19 @@ import {QuoteComponent} from "./quote/quote.component";
 import {
     SuccessStoryListComponent
 } from "./success-story-list/success-story-list.component";
+import {
+    DevTeamProjectComponent
+} from "./dev-team-project/dev-team-project.component";
+import {
+    DevTeamProjectListComponent
+} from "./dev-team-project-list/dev-team-project-list.component";
 
 
 export const elements = [
     AccordionComponent,
     CodeSnippetComponent,
+    DevTeamProjectComponent,
+    DevTeamProjectListComponent,
     EventCountdownTimerComponent,
     EventPopupComponent,
     FadeInContentComponent,
