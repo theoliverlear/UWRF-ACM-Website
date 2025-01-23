@@ -1,0 +1,39 @@
+// dev-team-project-style.component.scss
+@import "../../../styles/global-variables";
+@import "../../../styles/global-mixins";
+@import "../../../styles/global-functions";
+@import "../../../styles/global-placeholders";
+@import "../ss-button/ss-button-style.component";
+
+dev-team-project {
+    @include flex(flex-start, center, column);
+    height: calc($twenty-percent * 0.92);
+    margin: $half-percent $one-percent;
+    background-image: radial-gradient(at center, $falcon-red 50%, $charcoal);
+    padding: $one-percent $one-half-percent;
+    @extend %soft-border-radius;
+    border: $thinnest-border solid $alabaster-stone;
+    ss-title {
+        @include flex(center, center, column);
+        height: $four-percent;
+        max-width: $ten-percent;
+        text-align: center;
+        margin: $half-percent 0 $one-percent 0;
+    }
+    ss-paragraph {
+        max-width: $nine-percent;
+        margin: 0 0 $half-percent 0;
+    }
+    ss-anchor {
+        margin-top: auto;
+        @extend ss-button;
+        box-shadow: $charcoal simplest-calc(0.15) simplest-calc(0.15) 0 0;
+        &:hover {
+            box-shadow: $charcoal simplest-calc(0.25) simplest-calc(0.25) 0 0;
+        }
+        &:active {
+            box-shadow: none;
+            transform: translate(simplest-calc(0.15), simplest-calc(0.15));
+        }
+    }
+}
