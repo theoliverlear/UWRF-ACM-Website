@@ -30,6 +30,8 @@
               "angular/components/app/app-style.component.css",
               "angular/components/elements/accordion/accordion-style.component.css",
               "angular/components/elements/code-snippet/code-snippet-style.component.css",
+              "angular/components/elements/dev-team-project-list/dev-team-project-list-style.component.css",
+              "angular/components/elements/dev-team-project/dev-team-project-style.component.css",
               "angular/components/elements/event-countdown-timer/event-countdown-timer-style.component.css",
               "angular/components/elements/event-popup/event-popup-style.component.css",
               "angular/components/elements/fade-in-content/fade-in-content-style.component.css",
