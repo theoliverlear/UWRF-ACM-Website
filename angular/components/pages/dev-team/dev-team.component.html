@@ -1,4 +1,10 @@
 <!-- dev-team.component.html -->
+<div class="dev-team-title-div">
+    <ss-title [text]="'Dev Team'" [tagType]="TagType.H1"/>
+    <subtitle [text]="'The UWRF Development Team'" [tagType]="TagType.H4"/>
+    <hr/>
+</div>
+<dev-team-project-list [projects]="devTeamProjects"/>
 <ss-title [text]="'Success Stories'" [tagType]="TagType.H2"/>
 <hr />
 <success-story-list [successStories]="successStories"/>
