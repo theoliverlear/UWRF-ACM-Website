@@ -4,6 +4,7 @@ import {
     successStories
 } from "../../../assets/successStoryAssets";
 import {TagType} from "../../../models/html/TagType";
+import {devTeamProjects} from "../../../assets/devTeamProjectAssets";
 
 @Component({
     selector: 'dev-team',
@@ -17,4 +18,5 @@ export class DevTeamComponent {
 
     protected readonly TagType = TagType;
     protected readonly successStories = successStories;
+    protected readonly devTeamProjects = devTeamProjects;
 }
