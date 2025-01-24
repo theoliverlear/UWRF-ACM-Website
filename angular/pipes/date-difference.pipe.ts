@@ -2,11 +2,13 @@ import {Pipe, PipeTransform} from '@angular/core';
 import {
     DateInterval
 } from "../components/elements/event-countdown-timer/models/DateInterval";
+import {TimeConversion} from "../models/TimeConversion";
 @Pipe({
     name: 'dateDifference'
 })
 export class DateDifferencePipe implements PipeTransform {
-    transform(dateValue: number, interval: DateInterval): number {
+    public transform(dateValue: number, interval: DateInterval): number {
+        dateValue = this.normalizeDateValue(dateValue);
         switch (interval) {
             case DateInterval.DAYS:
                 return this.getDays(dateValue);
@@ -20,16 +22,25 @@ export class DateDifferencePipe implements PipeTransform {
                 return 0;
         }
     }
-    getDays(dateValue: number) {
-        return Math.floor(dateValue / (60 * 60 * 24));
+    private normalizeDateValue(dateValue: number): number {
+        return Math.max(0, Math.floor(dateValue));
     }
-    getHours(dateValue: number) {
-        return Math.floor((dateValue % (60 * 60 * 24)) / (60 * 60));
+    private getDays(dateValue: number): number {
+        const remainingDays: number = dateValue / TimeConversion.SECONDS_IN_DAY;
+        return Math.floor(remainingDays);
     }
-    getMinutes(dateValue: number) {
-        return Math.floor((dateValue % (60 * 60)) / 60);
+    private getHours(dateValue: number): number {
+        const remainingSeconds: number = dateValue % TimeConversion.SECONDS_IN_DAY;
+        const remainingHours: number = remainingSeconds / TimeConversion.SECONDS_IN_HOUR;
+        return Math.floor(remainingHours);
     }
-    getSeconds(dateValue: number) {
-        return Math.floor(dateValue % 60);
+    private getMinutes(dateValue: number): number {
+        const remainingSeconds: number = dateValue % TimeConversion.SECONDS_IN_HOUR;
+        const remainingMinutes: number = remainingSeconds / TimeConversion.SECONDS_IN_MINUTE;
+        return Math.floor(remainingMinutes);
+    }
+    private getSeconds(dateValue: number): number {
+        const remainingSeconds: number = dateValue % TimeConversion.SECONDS_IN_MINUTE;
+        return Math.floor(remainingSeconds);
     }
 }
