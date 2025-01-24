@@ -2,8 +2,18 @@
 <div class="dev-team-title-div">
     <ss-title [text]="'Dev Team'" [tagType]="TagType.H1"/>
     <subtitle [text]="'The UWRF Development Team'" [tagType]="TagType.H4"/>
+    <subtitle [text]="devTeamMeetingInfo" [tagType]="TagType.H5"/>
     <hr/>
 </div>
+<div class="dev-team-summary-div">
+    <div class="summary-and-logo">
+        <ss-paragraph [text]="devTeamSummary"/>
+        <ss-img [imageAsset]="devTeamLogoImageAsset"/>
+    </div>
+</div>
+<participation-mode-list [participationModes]="devTeamParticipationModes"/>
+<ss-paragraph id="final-message" [text]="devTeamFinalMessage"/>
+<hr />
 <dev-team-project-list [projects]="devTeamProjects"/>
 <ss-title [text]="'Success Stories'" [tagType]="TagType.H2"/>
 <hr />
