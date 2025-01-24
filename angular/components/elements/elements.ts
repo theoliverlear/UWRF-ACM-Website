@@ -78,10 +78,14 @@ import {
 import {
     ParticipationModeListComponent
 } from "./participation-mode-list/participation-mode-list.component";
+import {CodeEditorComponent} from "./code-editor/code-editor.component";
+import {CodeExerciseComponent} from "./code-exercise/code-exercise.component";
 
 
 export const elements = [
     AccordionComponent,
+    CodeEditorComponent,
+    CodeExerciseComponent,
     CodeSnippetComponent,
     DevTeamProjectComponent,
     DevTeamProjectListComponent,
