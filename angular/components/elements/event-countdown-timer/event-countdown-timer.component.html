@@ -1,22 +1,22 @@
 <!-- event-countdown-timer.component.html -->
-<ng-container *ngIf="!isNow(); else nowTemplate">
+<ng-container *ngIf="!this.isDuringEvent; else nowTemplate">
     <div class="time-title-div">
-        <h5>
+        <h5 class="remaining-time-text days-remaining-text">
             {{ this.remainingTime | dateDifference: DateInterval.DAYS }} Days
         </h5>
     </div>
     <div class="time-title-div">
-        <h5>
+        <h5 class="remaining-time-text hours-remaining-text">
             {{ this.remainingTime | dateDifference: DateInterval.HOURS }} Hours
         </h5>
     </div>
     <div class="time-title-div">
-        <h5>
+        <h5 class="remaining-time-text minutes-remaining-text">
             {{ this.remainingTime | dateDifference: DateInterval.MINUTES }} Minutes
         </h5>
     </div>
     <div class="time-title-div">
-        <h5>
+        <h5 class="remaining-time-text seconds-remaining-text">
             {{ this.remainingTime | dateDifference: DateInterval.SECONDS }} Seconds
         </h5>
     </div>
@@ -24,7 +24,7 @@
 <ng-template #nowTemplate>
     <div class="time-title-div">
         <h5>
-            Happening Now!
+            Happening Now! Come join us!
         </h5>
     </div>
 </ng-template>
