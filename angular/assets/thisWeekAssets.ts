@@ -5,6 +5,7 @@ import {
     shaneMeeting
 } from "./eventAssets";
 import {TimeConversion} from "../models/TimeConversion";
+import {DateTime} from "luxon";
 
 export const firstMeetingPrompt: MeetingEventPrompt = new MeetingEventPrompt(firstMeetingOfSemester,
                                                                              "Say hey, hi, hello, welcome! Win a prize in trivia!");
@@ -24,33 +25,25 @@ function getNextMeetingTitle(): MeetingEventPrompt {
     if (!hasMeetingThisWeek()) {
         return noMeetingPrompt;
     }
-    const currentDate: Date = new Date();
+    const currentDateValue: number = DateTime.now().setZone('America/Chicago').toMillis();
     for (const event of meetingEventPrompts) {
         if (!event.meetingEvent) {
             continue;
         }
-        if (event.meetingEvent.eventDate.getTime() > currentDate.getTime()) {
+        if (event.meetingEvent.eventDate.toMillis() > currentDateValue) {
             return event;
         }
     }
 }
-function getOneWeekInMilliseconds(): number {
-    return TimeConversion.DAYS_IN_WEEK *
-           TimeConversion.HOURS_IN_DAY *
-           TimeConversion.MINUTES_IN_HOUR *
-           TimeConversion.SECONDS_IN_MINUTE *
-           TimeConversion.MILLIS_IN_SECOND;
-}
 function hasMeetingThisWeek(): boolean {
-    const oneWeekInMilliseconds: number = getOneWeekInMilliseconds();
-    const today: number = new Date().getTime();
+    const today: number = DateTime.now().setZone('America/Chicago').toMillis();
     for (const event of meetingEventPrompts) {
         if (!event.meetingEvent) {
             continue;
         }
-        const eventDate: number = event.meetingEvent.eventDate.getTime();
+        const eventDate: number = event.meetingEvent.eventDate.toMillis();
         const isFutureEvent: boolean = eventDate > today;
-        const isWithinOneWeek: boolean = eventDate <= today + oneWeekInMilliseconds;
+        const isWithinOneWeek: boolean = eventDate <= today + TimeConversion.MILLISECONDS_IN_WEEK;
         if (isFutureEvent && isWithinOneWeek) {
             return true;
         }
