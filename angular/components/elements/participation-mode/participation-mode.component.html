@@ -1,0 +1,10 @@
+<!-- participation-mode.component.html -->
+<ng-container>
+    <ss-title [text]="participationMode.modeType.toUpperCase()" [tagType]="TagType.H4"/>
+<!--    <ss-paragraph [text]="participationMode.description"/>-->
+    <accordion [title]="'Learn More'">
+        <p discordTextHighlight>
+            {{ participationMode.description }}
+        </p>
+    </accordion>
+</ng-container>
