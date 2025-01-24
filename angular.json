@@ -46,6 +46,8 @@
               "angular/components/elements/leetcode-problem/leetcode-problem-style.component.css",
               "angular/components/elements/nav-bar/nav-bar-style.component.css",
               "angular/components/elements/nav-item/nav-item-style.component.css",
+              "angular/components/elements/participation-mode-list/participation-mode-list-style.component.css",
+              "angular/components/elements/participation-mode/participation-mode-style.component.css",
               "angular/components/elements/quote/quote-style.component.css",
               "angular/components/elements/ss-anchor/ss-anchor-style.component.css",
               "angular/components/elements/ss-button/ss-button-style.component.css",
