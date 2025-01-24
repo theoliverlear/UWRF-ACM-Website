@@ -1,0 +1,6 @@
+<!-- code-exercise.component.html -->
+<ng-container>
+    <code-editor *ngFor="let exercise of codeExercises"
+                 [editableCode]="exercise"
+                 [exerciseTitle]="getPossibleTitle(exercise)"/>
+</ng-container>
