@@ -6,4 +6,50 @@
 
 dev-team {
     @include flex(flex-start, center, column);
+    .dev-team-title-div {
+        @include flex(center, center, column);
+        subtitle {
+            margin: $quarter-percent 0;
+            text-align: center;
+            max-width: 95%;
+        }
+    }
+    .dev-team-summary-div {
+        margin: $one-percent 0;
+        width: 90%;
+        .summary-and-logo {
+            ss-paragraph {
+                max-width: 50%;
+                margin: 0 $half-percent 0 0;
+            }
+            @include flex(space-around, center, row);
+            ss-img {
+                @include square-size($fifteen-percent);
+                @extend %soft-border-radius;
+                box-shadow: $alabaster-stone 0 0 simplest-calc(0.15) simplest-calc(0.1);
+            }
+        }
+    }
+    $final-message-box-shadow-color: $less-faded-alabaster-stone;
+    #final-message {
+        width: 80%;
+        background-image: radial-gradient(at center, $light-charcoal, $charcoal);
+        color: $alabaster-stone;
+        font-family: $source-code-font;
+        box-shadow: $final-message-box-shadow-color 0 0 simplest-calc(0.15) simplest-calc(0.05);
+        padding: $one-percent;
+        animation: box-shadow-radiate 10s infinite cubic-bezier(0.4, 0.1, 0.2, 1);
+        margin: $one-percent 0;
+    }
+    @keyframes box-shadow-radiate {
+        0% {
+            box-shadow: $final-message-box-shadow-color 0 0 simplest-calc(0.15) simplest-calc(0.05);
+        }
+        50% {
+            box-shadow: $final-message-box-shadow-color 0 0 simplest-calc(0.25) simplest-calc(0.2);
+        }
+        100% {
+            box-shadow: $final-message-box-shadow-color 0 0 simplest-calc(0.15) simplest-calc(0.05);
+        }
+    }
 }
