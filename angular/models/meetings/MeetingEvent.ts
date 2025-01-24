@@ -1,9 +1,11 @@
+import {DateTime} from "luxon";
+
 export class MeetingEvent {
     title: string;
-    eventDate: Date;
+    eventDate: DateTime;
     location: string;
     constructor(title: string,
-                eventData: Date,
+                eventData: DateTime,
                 location: string) {
         this.title = title;
         this.eventDate = eventData;
