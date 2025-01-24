@@ -1,0 +1,10 @@
+<!-- code-editor.component.html -->
+<ng-container>
+    <ss-title *ngIf="exerciseTitle" [tagType]="TagType.H3" [text]="exerciseTitle"></ss-title>
+    <div class="code-editor-container">
+        <ngx-monaco-editor
+                [options]="editorOptions"
+                [(ngModel)]="editableCode.startingCode"
+                class="code-editor"/>
+    </div>
+</ng-container>
