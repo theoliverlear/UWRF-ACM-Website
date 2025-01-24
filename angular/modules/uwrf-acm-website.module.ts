@@ -16,6 +16,7 @@ import {elements} from "../components/elements/elements";
 import {pages} from "../components/pages/pages";
 import {services} from "../services/services";
 import {pipes} from "../pipes/pipes";
+import {MonacoEditorModule} from "ngx-monaco-editor";
 
 @NgModule({
     declarations: [
@@ -32,6 +33,7 @@ import {pipes} from "../pipes/pipes";
         AppRouting,
         RouterOutlet,
         NgOptimizedImage,
+        MonacoEditorModule.forRoot(),
         HttpClientModule],
     providers: [
         ...services,
