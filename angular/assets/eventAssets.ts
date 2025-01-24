@@ -1,8 +1,10 @@
 import {
     MeetingEvent
 } from "../models/meetings/MeetingEvent";
+import {DateTime} from "luxon";
 
-const defaultAcmMeetingPlace = 'South Hall 21 and Virtually In Discord';
+const riverFallsTimeZone: string = 'America/Chicago';
+const defaultAcmMeetingPlace = 'South Hall 21 and Virtually In Discord 4:30 PM';
 export const firstMeetingOfSemester: MeetingEvent = new MeetingEvent('First Meeting of Semester',
                                                                      getMeetingDateTime('2025-02-06'),
                                                                      defaultAcmMeetingPlace);
@@ -20,13 +22,14 @@ const meetingEventList: MeetingEvent[] = [
     readabilityMeeting,
     lastMeetingOfSemester,
 ];
-function getMeetingDateTime(dateString: string) {
-    return new Date(`${dateString}T16:30:00`);
+function getMeetingDateTime(dateString: string): DateTime {
+    const timeZone: { zone: string } = { zone: riverFallsTimeZone };
+    return DateTime.fromISO(`${dateString}T16:30:00`, timeZone).setZone(riverFallsTimeZone, { keepLocalTime: true });
 }
 function getNextMeetingEvent(): MeetingEvent {
     let closestEvent: MeetingEvent = meetingEventList[0];
     for (const event of meetingEventList) {
-        if (event.eventDate.getTime() < closestEvent.eventDate.getTime()) {
+        if (event.eventDate.toMillis() < closestEvent.eventDate.toMillis()) {
             closestEvent = event;
         }
     }
