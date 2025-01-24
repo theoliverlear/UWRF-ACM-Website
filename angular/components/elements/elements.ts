@@ -72,6 +72,12 @@ import {
 import {
     DevTeamProjectListComponent
 } from "./dev-team-project-list/dev-team-project-list.component";
+import {
+    ParticipationModeComponent
+} from "./participation-mode/participation-mode.component";
+import {
+    ParticipationModeListComponent
+} from "./participation-mode-list/participation-mode-list.component";
 
 
 export const elements = [
@@ -93,6 +99,8 @@ export const elements = [
     LeetCodeProblemHintComponent,
     NavBarComponent,
     NavItemComponent,
+    ParticipationModeComponent,
+    ParticipationModeListComponent,
     QuoteComponent,
     SsAnchorComponent,
     SsButtonComponent,
