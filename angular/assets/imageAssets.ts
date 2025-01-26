@@ -12,6 +12,9 @@ export function getGuestSpeakerImagePath(fileName: string): string {
 export function getSuccessStoryImagePath(fileName: string): string {
     return successStoryImageAssetPath + fileName;
 }
+export function getAcmMemberImagePath(fileName: string): string {
+    return acmMemberImageAssetPath + fileName;
+}
 export function getLogoImagePath(fileName: string): string {
     return logoImageAssetPath + fileName;
 }
@@ -21,6 +24,7 @@ export function getIconImagePath(fileName: string): string {
 const imageAssetPath: string = 'assets/images/';
 const guestSpeakersImageAssetPath: string = imageAssetPath + 'guest_speakers/';
 const successStoryImageAssetPath: string = imageAssetPath + 'success_stories/';
+const acmMemberImageAssetPath: string = imageAssetPath + 'acm_members/';
 const logoImageAssetPath: string = imageAssetPath + 'logo/';
 const iconImageAssetPath: string = imageAssetPath + 'icon/';
 
@@ -72,3 +76,45 @@ export const devTeamLogoImageAsset: ImageAsset = {
     src: getLogoImagePath('dev_team_logo.png'),
     alt: 'Dev Team Logo'
 };
+export const randyBeeScooterImageAsset: ImageAsset = {
+    src: getAcmMemberImagePath('randy_bee_scooter.JPEG'),
+    alt: 'Randy and Bee on Scooter'
+}
+export const micsGroupImageAsset: ImageAsset = {
+    src: getAcmMemberImagePath('mics_group.JPG'),
+    alt: 'MICS Group'
+}
+export const oldMicsGroupFirstHalfImageAsset: ImageAsset = {
+    src: getAcmMemberImagePath('old_mics_group_first_half.jpg'),
+    alt: 'Old MICS Group First Half'
+};
+export const oldMicsGroupSecondHalfImageAsset: ImageAsset = {
+    src: getAcmMemberImagePath('old_mics_group_second_half.jpg'),
+    alt: 'Old MICS Group Second Half'
+};
+export const acmNvidiaImageAsset: ImageAsset = {
+    src: getAcmMemberImagePath('acm_nvidia.jpg'),
+    alt: 'ACM Nvidia'
+};
+export const acmSelfieImageAsset: ImageAsset = {
+    src: getAcmMemberImagePath('acm_selfie.jpg'),
+    alt: 'ACM Selfie'
+};
+export const acmTriviaNightImageAsset: ImageAsset = {
+    src: getAcmMemberImagePath('acm_trivia_night.jpg'),
+    alt: 'ACM Trivia Night'
+};
+export const acmTalkImageAsset: ImageAsset = {
+    src: getAcmMemberImagePath('acm_talk.jpg'),
+    alt: 'ACM Talk'
+};
+export const acmMemberImageAssets: ImageAsset[] = [
+    randyBeeScooterImageAsset,
+    micsGroupImageAsset,
+    oldMicsGroupFirstHalfImageAsset,
+    oldMicsGroupSecondHalfImageAsset,
+    acmNvidiaImageAsset,
+    acmSelfieImageAsset,
+    acmTriviaNightImageAsset,
+    acmTalkImageAsset
+];
