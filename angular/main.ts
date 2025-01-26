@@ -1,3 +1,5 @@
+/// <reference types="@angular/localize" />
+
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import '@angular/compiler';
 import { UwrfAcmWebsiteModule } from './modules/uwrf-acm-website.module';
