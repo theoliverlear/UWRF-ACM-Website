@@ -73,7 +73,7 @@ export const randyFranzmeierImageAsset: ImageAsset = {
     alt: 'Randy Franzmeier'
 };
 export const devTeamLogoImageAsset: ImageAsset = {
-    src: getLogoImagePath('dev_team_logo.png'),
+    src: getLogoImagePath('dev_team_logo.jpg'),
     alt: 'Dev Team Logo'
 };
 export const randyBeeScooterImageAsset: ImageAsset = {
