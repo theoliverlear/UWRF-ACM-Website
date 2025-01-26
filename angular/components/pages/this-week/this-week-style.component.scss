@@ -7,6 +7,7 @@
 this-week {
     @include flex(flex-start, center, column);
     this-week-title-container {
+        max-width: 95%;
         margin: $one-half-percent 0;
         this-week-title {
             margin: $one-percent 0 0 0;
