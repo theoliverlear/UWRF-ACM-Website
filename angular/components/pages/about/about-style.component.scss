@@ -1,9 +1,57 @@
- // about-style.component.scss
+// about-style.component.scss
 @import "../../../styles/global-variables";
 @import "../../../styles/global-mixins";
 @import "../../../styles/global-functions";
 @import "../../../styles/global-placeholders";
 
-about {
 
+about {
+    @include flex(flex-start, center, column);
+    .acm-title-div {
+        width: 100%;
+        margin: $half-percent 0;
+        @include flex(center, center, column);
+        subtitle {
+            margin: $quarter-percent 0;
+            text-align: center;
+            max-width: 95%;
+        }
+    }
+    acm-action-list {
+        margin: $one-percent 0;
+    }
+    .acm-summary-div {
+        .summary-and-logo {
+            ss-paragraph {
+                max-width: 50%;
+                margin: 0 $half-percent 0 0;
+            }
+            @include flex(space-around, center, row);
+            ss-img {
+                background-color: $pristine-white;
+                padding: $half-percent;
+                @include square-size($fifteen-percent);
+                @extend %soft-border-radius;
+                box-shadow: $pristine-white 0 0 simplest-calc(0.15) simplest-calc(0.1);
+            }
+        }
+    }
+    $final-message-box-shadow-color: $less-faded-alabaster-stone;
+    @include flex(center, center, column);
+    #final-message {
+        width: 80%;
+        background-image: radial-gradient(at center, $light-charcoal, $charcoal);
+        color: $alabaster-stone;
+        font-family: $source-code-font;
+        box-shadow: $final-message-box-shadow-color 0 0 simplest-calc(0.15) simplest-calc(0.05);
+        padding: $one-percent;
+        animation: box-shadow-radiate 10s infinite cubic-bezier(0.4, 0.1, 0.2, 1);
+        margin: $one-percent 0;
+        p {
+            font-size: calc($p-font-size * 0.85);
+        }
+    }
+    carousel {
+
+    }
 }
