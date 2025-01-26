@@ -55,9 +55,11 @@
     "@angular/compiler": "^18.2.2",
     "@angular/core": "^18.2.2",
     "@angular/forms": "^18.2.2",
+    "@angular/localize": "^18.2.13",
     "@angular/platform-browser": "^18.2.2",
     "@angular/platform-browser-dynamic": "^18.2.2",
     "@angular/router": "^18.2.2",
+    "@ng-bootstrap/ng-bootstrap": "^17.0.1",
     "@ngtools/webpack": "^18.2.2",
     "@popperjs/core": "^2.11.8",
     "@stomp/stompjs": "^7.0.0",
@@ -89,15 +91,16 @@
     "monaco-editor": "^0.52.2",
     "ng-particles": "^3.12.0",
     "ngx-ace-editor-wrapper": "^9.1.12",
-    "ngx-monaco-editor": "^12.0.0",
+    "ngx-monaco-editor-v2": "^18.1.0",
     "ngx-particle": "^1.5.0",
     "particles.js": "^2.0.0",
     "prismjs": "^1.29.0",
     "rxjs": "~7.8.0",
     "sockjs-client": "^1.6.1",
+    "swiper": "^9.4.1",
     "tslib": "^2.7.0",
     "uppy": "^3.25.5",
     "webstomp-client": "^1.2.6",
-    "zone.js": "^0.15.0"
+    "zone.js": "~0.14.10"
   }
 }
