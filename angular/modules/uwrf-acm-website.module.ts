@@ -16,7 +16,10 @@ import {elements} from "../components/elements/elements";
 import {pages} from "../components/pages/pages";
 import {services} from "../services/services";
 import {pipes} from "../pipes/pipes";
-import {MonacoEditorModule} from "ngx-monaco-editor";
+import {MonacoEditorModule} from "ngx-monaco-editor-v2";
+import {
+    NgbCarouselModule,
+} from "@ng-bootstrap/ng-bootstrap";
 
 @NgModule({
     declarations: [
@@ -34,7 +37,9 @@ import {MonacoEditorModule} from "ngx-monaco-editor";
         RouterOutlet,
         NgOptimizedImage,
         MonacoEditorModule.forRoot(),
-        HttpClientModule],
+        HttpClientModule,
+        NgbCarouselModule
+    ],
     providers: [
         ...services,
         provideHttpClient(withFetch()),
