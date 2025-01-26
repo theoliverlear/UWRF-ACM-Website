@@ -1,1 +1,16 @@
 <!-- about.component.html -->
+<div class="acm-title-div">
+    <ss-title [text]="'ACM'" [tagType]="TagType.H1"/>
+    <subtitle [text]="'Association for Computing Machinery'" [tagType]="TagType.H3"/>
+    <subtitle [text]="acmMeetingInfo" [tagType]="TagType.H5"/>
+    <hr/>
+</div>
+<div class="acm-summary-div">
+    <div class="summary-and-logo">
+        <ss-paragraph [text]="acmSummary"/>
+        <ss-img [imageAsset]="logoImageAsset"/>
+    </div>
+</div>
+<acm-action-list/>
+<ss-paragraph id="final-message" [text]="acmFinalMessage"/>
+<carousel [imageAssets]="acmMemberImageAssets"/>
