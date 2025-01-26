@@ -1,0 +1,7 @@
+<!-- acm-action-list.component.html -->
+<ng-container>
+    <slide-in-content *ngFor="let action of whatAcmDoesAnswers"
+                      [slideInProperties]="acmActionListSlideInAnimationProperties">
+        <acm-action [actionText]="action"/>
+    </slide-in-content>
+</ng-container>
