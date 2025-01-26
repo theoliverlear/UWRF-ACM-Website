@@ -10,8 +10,12 @@
     "esModuleInterop": true,
     "moduleResolution": "node",
     "skipLibCheck": true,
+    "allowSyntheticDefaultImports": true,
     "experimentalDecorators": true,
-    "emitDecoratorMetadata": true
+    "emitDecoratorMetadata": true,
+    "types": [
+      "@angular/localize"
+    ]
   },
   "include": ["./angular/**/*"],
   "exclude": ["node_modules"],
