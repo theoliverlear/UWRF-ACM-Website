@@ -19,6 +19,8 @@ export const devTeamSummary: string = "The UWRF Development Team, or Dev " +
     " in their programming and teamwork ability.";
 export const devTeamMeetingInfo: string = "Tuesdays, 4:30-6:30 PM, in South" +
                                           " Hall 21 and virtually in Discord";
+export const acmMeetingInfo: string = "Thursdays, 4:30-6:30 PM, in South Hall" +
+    " 21 and virtually in Discord";
 export const devTeamVersatile: string = "As a club, Dev Team is in a unique" +
     " position to offer a versatile mode of participation in the club. " +
     "There are many ways our members choose to participate. All of the " +
@@ -59,3 +61,26 @@ export const devTeamFinalMessage: string = "This group has all the " +
     "build your resume. You can show employers your real-world work in Dev " +
     "Team. We at Dev Team are proud of our ability to create projects our " +
     "members want and appeal to what employers need.";
+export const acmSummary: string = "The Association for Computing Machinery," +
+    " or ACM, is a national organization of computer scientists with the aim" +
+    " of personal development, collaboration, and forward-thinking. Our local" +
+    " chapter at UWRF works to support this mission with our own members and" +
+    " content. We host our own meetings, workshops, and talks with" +
+    " professionals. We also provide development team experience with " +
+    "The UWRF Development Team, or Dev Team."
+export const whatAcmDoesQuestion: string = "What can you do at ACM?";
+export const whatAcmDoesAnswers: string[] = [
+    promoTextMeetProfessions,
+    promoTextSoftwareDevelopment,
+    promoTextBuildTech,
+    promoTextFormFriendships
+];
+export const acmFinalMessage: string = "We have meetings every week with the" +
+    " goal of furthering your interest in computer science. We offer homework" +
+    " help, career building with The UWRF Development Team, and content about" +
+    " things you care about. We dive into topics that may be out of reach for" +
+    " your classes, but you may find it especially important. This includes" +
+    " code quality, interview workshops, and talks with experts in the" +
+    " industry. ACM is a great place to meet friends with similar interests." +
+    " We often celebrate with food, candy, and prizes. We welcome anyone to" +
+    " come to our meetings to see what ACM is all about!"
