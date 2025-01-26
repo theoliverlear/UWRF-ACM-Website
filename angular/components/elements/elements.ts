@@ -80,10 +80,22 @@ import {
 } from "./participation-mode-list/participation-mode-list.component";
 import {CodeEditorComponent} from "./code-editor/code-editor.component";
 import {CodeExerciseComponent} from "./code-exercise/code-exercise.component";
+import {FloatUpComponent} from "./float-up/float-up.component";
+import {
+    SlideInContentComponent
+} from "./slide-in-content/slide-in-content.component";
+import {CarouselComponent} from "./carousel/carousel.component";
+import {AcmActionComponent} from "./acm-action/acm-action.component";
+import {
+    AcmActionListComponent
+} from "./acm-action-list/acm-action-list.component";
 
 
 export const elements = [
     AccordionComponent,
+    AcmActionComponent,
+    AcmActionListComponent,
+    CarouselComponent,
     CodeEditorComponent,
     CodeExerciseComponent,
     CodeSnippetComponent,
@@ -93,6 +105,7 @@ export const elements = [
     EventPopupComponent,
     FadeInContentComponent,
     FadeInOutContentComponent,
+    FloatUpComponent,
     FloatingContentComponent,
     GuestSpeakerComponent,
     GuestSpeakerTopicComponent,
@@ -106,6 +119,7 @@ export const elements = [
     ParticipationModeComponent,
     ParticipationModeListComponent,
     QuoteComponent,
+    SlideInContentComponent,
     SsAnchorComponent,
     SsButtonComponent,
     SsCodeComponent,
