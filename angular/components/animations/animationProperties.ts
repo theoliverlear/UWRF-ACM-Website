@@ -1,11 +1,18 @@
 import {FadeInOutProperties} from "./models/FadeInOutProperties";
 import {ScaleProperties} from "./models/ScaleProperties";
 import {FadeInProperties} from "./models/FadeInProperties";
+import {SlideInProperties} from "./models/SlideInProperties";
 
+// TODO: Create generalized interface that better encapsulates duration
+//       delay properties.
 export const quickFadeInAnimationProperties: FadeInProperties = {
     duration: '300ms',
     delay: '0ms'
 };
+export const nineSecondDelayMediumFadeInAnimationProperties: FadeInProperties = {
+    duration: '1500ms',
+    delay: '9000ms'
+}
 export const acmTitleFadeInOutAnimationProperties: FadeInOutProperties = {
     fadeInDuration: '600ms',
     waitDuration: '1500ms',
@@ -44,4 +51,8 @@ export const whatAcmDoesContentFadeInOutAnimationProperties: FadeInOutProperties
     fadeInDuration: '300ms',
     waitDuration: '0ms',
     fadeOutDuration: '300ms'
+};
+export const acmActionListSlideInAnimationProperties: SlideInProperties = {
+    duration: '3000ms',
+    delay: '0ms'
 };
