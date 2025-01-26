@@ -16,7 +16,10 @@
             "outputPath": "src/main/resources/templates/angular_build",
             "index": "angular/index.html",
             "main": "angular/main.ts",
-            "polyfills": "angular/polyfills.ts",
+            "polyfills": [
+              "angular/polyfills.ts",
+              "@angular/localize/init"
+            ],
             "tsConfig": "tsconfig.json",
             "aot": false,
             "assets": [
@@ -34,6 +37,9 @@
             "styles": [
               "angular/components/app/app-style.component.css",
               "angular/components/elements/accordion/accordion-style.component.css",
+              "angular/components/elements/acm-action-list/acm-action-list-style.component.css",
+              "angular/components/elements/acm-action/acm-action-style.component.css",
+              "angular/components/elements/carousel/carousel-style.component.css",
               "angular/components/elements/code-editor/code-editor-style.component.css",
               "angular/components/elements/code-exercise/code-exercise-style.component.css",
               "angular/components/elements/code-snippet/code-snippet-style.component.css",
@@ -43,6 +49,7 @@
               "angular/components/elements/event-popup/event-popup-style.component.css",
               "angular/components/elements/fade-in-content/fade-in-content-style.component.css",
               "angular/components/elements/fade-in-out-content/fade-in-out-content-style.component.css",
+              "angular/components/elements/float-up/float-up-style.component.css",
               "angular/components/elements/floating-content/floating-content-style.component.css",
               "angular/components/elements/guest-speaker-topic-list/guest-speaker-topic-list-style.component.css",
               "angular/components/elements/guest-speaker-topic/guest-speaker-topic-style.component.css",
@@ -56,6 +63,7 @@
               "angular/components/elements/participation-mode-list/participation-mode-list-style.component.css",
               "angular/components/elements/participation-mode/participation-mode-style.component.css",
               "angular/components/elements/quote/quote-style.component.css",
+              "angular/components/elements/slide-in-content/slide-in-content-style.component.css",
               "angular/components/elements/ss-anchor/ss-anchor-style.component.css",
               "angular/components/elements/ss-button/ss-button-style.component.css",
               "angular/components/elements/ss-code/ss-code-style.component.css",
@@ -83,7 +91,9 @@
               "angular/components/pages/not-found/not-found-style.component.css",
               "angular/components/pages/this-week/this-week-style.component.css"
             ],
-            "scripts": [],
+            "scripts": [
+              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+            ],
             "fileReplacements": []
           },
           "configurations": {
@@ -158,7 +168,10 @@
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
             "main": "angular/test.ts",
-            "polyfills": "angular/polyfills.ts",
+            "polyfills": [
+              "angular/polyfills.ts",
+              "@angular/localize/init"
+            ],
             "tsConfig": "tsconfig.spec.json",
             "karmaConfig": "karma.conf.js",
             "assets": [
