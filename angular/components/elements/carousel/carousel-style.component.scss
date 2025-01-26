@@ -1,0 +1,30 @@
+// carousel-style.component.scss
+@import "../../../styles/global-variables";
+@import "../../../styles/global-mixins";
+@import "../../../styles/global-functions";
+@import "../../../styles/global-placeholders";
+
+
+carousel {
+    @include flex(center, center, column);
+    @import "bootstrap/scss/bootstrap";
+    width: 100%;
+    margin: $one-percent 0;
+    ngb-carousel {
+        width: 100%;
+        @include flex(center, center, column);
+        ss-img {
+            @include square-size($twenty-five-percent);
+            margin: $one-percent auto;
+            @extend %soft-border-radius;
+            border: $thin-border $alabaster-stone solid;
+            background-color: $alabaster-stone;
+            padding: $half-percent;
+            img {
+                box-shadow: $charcoal 0 0 simplest-calc(0.15) simplest-calc(0.1);
+                @extend %fill-container;
+                background-color: $alabaster-stone;
+            }
+        }
+    }
+}
