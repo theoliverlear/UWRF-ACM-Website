@@ -41,3 +41,25 @@ export const accordionPopAnimation: AnimationTriggerMetadata = trigger('accordio
     ),
     transition('collapsed <=> expanded', [animate('300ms ease-in-out')])
 ]);
+export const slideLeftAnimation: AnimationTriggerMetadata = trigger("slideLeft", [
+    state(
+        "hidden",
+        style({
+            transform: "translateX(-100%)",
+            opacity: 0,
+        })
+    ),
+    state(
+        "visible",
+        style({
+            transform: "translateX(0)",
+            opacity: 1,
+        })
+    ),
+    transition("hidden => visible", [
+        animate("{{ duration }} {{ delay }} cubic-bezier(0.25, 0.1, 0.25, 1)")
+    ]),
+    transition("visible => hidden", [
+        animate("{{ duration }} {{ delay }} cubic-bezier(0.25, 0.1, 0.25, 1)")
+    ]),
+]);
