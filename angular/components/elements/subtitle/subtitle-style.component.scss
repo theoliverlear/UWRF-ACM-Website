@@ -8,4 +8,5 @@ subtitle {
     @include flex(center, center, row);
     color: $pristine-white;
     font-style: italic;
+    text-align: center;
 }
