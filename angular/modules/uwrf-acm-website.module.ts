@@ -36,7 +36,9 @@ import {
         AppRouting,
         RouterOutlet,
         NgOptimizedImage,
-        MonacoEditorModule.forRoot(),
+        MonacoEditorModule.forRoot({
+            baseUrl: 'assets/monaco-editor/min/vs'
+        }),
         HttpClientModule,
         NgbCarouselModule
     ],
