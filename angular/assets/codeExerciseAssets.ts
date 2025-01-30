@@ -21,11 +21,86 @@ const codeQualityExerciseOneStartingCode: string = `public class CompanySurvey {
         c();
     }
 }`;
+const codeQualityExerciseTwoStartingCode: string = `public class GasPumpDirty {
+    private double gasTankCapacity;
+    private double gasTankLevel;
+    private static final double gasPerSecond = 1;
+    private static final double gasPrice = 2.50;
+    // Ideas: (could these be methods?)
+    // 1. See if you have enough space.
+    // 2. Check if we will overflow.
+    // 3. Fill up the tank.
+    // 4. Announce the cost.
+    public void getGas() {
+        double cost = 0.0;
+        if (this.gasTankLevel < this.gasTankCapacity) {
+            while (this.gasTankLevel + gasPerSecond <= this.gasTankCapacity) {
+                this.gasTankLevel += gasPerSecond;
+                cost += gasPrice;
+            }
+        } else {
+            System.out.println("Gas tank is full.");
+        }
+        System.out.println("Cost: $" + cost);
+    }
+}`;
+const codeQualityExerciseThreeStartingCode: string = `public class CorporateIncome {
+    static final double CORPORATE_TAX_RATE = 0.21;
+    static final double SMALL_BUSINESS_CREDIT_PER_EMPLOYEE = 2400;
+
+    public static double calculateNetIncome(int numEmployees,
+                                            double averageSalary,
+                                            double revenue,
+                                            double expenses) {
+        double employeeExpenses = numEmployees * averageSalary;
+        System.out.println("Total Employee Expenses: " + employeeExpenses);
+        double taxableIncome = revenue - employeeExpenses;
+        if (numEmployees < 500) {
+            double smallBusinessCredit = numEmployees *
+                    SMALL_BUSINESS_CREDIT_PER_EMPLOYEE;
+            System.out.println("You qualify for a small business credit of: "
+                               + smallBusinessCredit);
+            taxableIncome -= smallBusinessCredit;
+        }
+        double taxes = taxableIncome * CORPORATE_TAX_RATE;
+        System.out.println("You owe $" + taxes + " in taxes.");
+        double netIncome = revenue - expenses - taxes;
+        System.out.println("Net Income: " + netIncome);
+        return netIncome;
+    }
+
+    public boolean possibleMethod() {
+        return false;
+    }
+
+    public void anotherPossibleMethod() {
+        System.out.println("...");
+    }
+    public double possibleMathMethod() {
+        return 0.0;
+    }
+
+    public double anotherPossibleMathMethod() {
+        return 0.0;
+    }
+}`;
 export const codeQualityExerciseOne = new EditableCode(
     ProgrammingLanguage.JAVA,
     codeQualityExerciseOneStartingCode,
     "Code Quality Exercise One"
 );
+export const codeQualityExerciseTwo = new EditableCode(
+    ProgrammingLanguage.JAVA,
+    codeQualityExerciseTwoStartingCode,
+    "Code Quality Exercise Two"
+);
+export const codeQualityExerciseThree = new EditableCode(
+    ProgrammingLanguage.JAVA,
+    codeQualityExerciseThreeStartingCode,
+    "Code Quality Exercise Three"
+);
 export const codeQualityExercises: EditableCode[] = [
-    codeQualityExerciseOne
+    codeQualityExerciseOne,
+    codeQualityExerciseTwo,
+    codeQualityExerciseThree
 ];
