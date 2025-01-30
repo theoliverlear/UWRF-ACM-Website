@@ -14,19 +14,13 @@ import {ImageAsset} from "../../../assets/imageAssets";
     templateUrl: './ss-img.component.html',
     styleUrls: ['./ss-img-style.component.css']
 })
-export class SsImgComponent implements AfterViewInit {
+export class SsImgComponent {
     @Input() imageAsset: ImageAsset;
     @Input() childId: string;
     @Input() childClass: string;
     @ViewChild('imageElement') imageElement: ElementRef;
-    constructor(private changeDetector: ChangeDetectorRef) {
-        console.log('SsImgComponent loaded');
-    }
-    ngAfterViewInit() {
-        if (this.imageAsset.src === '') {
+    constructor() {
 
-        }
-        this.changeDetector.detectChanges();
     }
     addClassToImageElement(className: string) {
         this.imageElement.nativeElement.classList.add(className);
