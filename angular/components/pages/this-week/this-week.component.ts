@@ -11,6 +11,9 @@ import {
     codeQualityExerciseOne,
     codeQualityExercises
 } from "../../../assets/codeExerciseAssets";
+import {
+    isFirstMeeting, isSecondMeeting, isThirdMeeting
+} from "../../../assets/eventAssets";
 
 @Component({
     selector: 'this-week',
@@ -22,7 +25,6 @@ export class ThisWeekComponent {
     constructor() {
         
     }
-
     protected readonly nextMeetingPrompt = nextMeetingPrompt;
     protected readonly weekOneLeetCodeProblems = weekOneLeetCodeProblems;
     protected readonly thisWeekMeetingContentFadeInAnimationProperties = thisWeekMeetingContentFadeInAnimationProperties;
@@ -30,4 +32,7 @@ export class ThisWeekComponent {
     protected readonly weekOneTriviaGames = weekOneTriviaGames;
     protected readonly codeQualityExerciseOne = codeQualityExerciseOne;
     protected readonly codeQualityExercises = codeQualityExercises;
+    protected readonly isSecondMeeting = isSecondMeeting;
+    protected readonly isFirstMeeting = isFirstMeeting;
+    protected readonly isThirdMeeting = isThirdMeeting;
 }
