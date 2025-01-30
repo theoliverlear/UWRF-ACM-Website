@@ -2,6 +2,7 @@ import {
     MeetingEvent
 } from "../models/meetings/MeetingEvent";
 import {DateTime} from "luxon";
+import {TimeConversion} from "../models/TimeConversion";
 /*
 Spring 2025 Schedule:
 - Meeting One: Trivia and Celebration
@@ -19,7 +20,7 @@ Spring 2025 Schedule:
 - Meeting Thirteen: Semester Closing Party
  */
 const riverFallsTimeZone: string = 'America/Chicago';
-const defaultAcmMeetingPlace = 'South Hall 21 and Virtually In Discord 4:30 PM';
+const defaultAcmMeetingPlace = 'South Hall 21 and Virtually In Discord, Thursdays 4:30 PM';
 export const firstMeetingOfSemester: MeetingEvent = new MeetingEvent('First Meeting of Semester',
                                                                      getMeetingDateTime('2025-02-06'),
                                                                      defaultAcmMeetingPlace);
@@ -78,14 +79,65 @@ function getMeetingDateTime(dateString: string): DateTime {
     const timeZone: { zone: string } = { zone: riverFallsTimeZone };
     return DateTime.fromISO(`${dateString}T16:30:00`, timeZone).setZone(riverFallsTimeZone, { keepLocalTime: true });
 }
-function getNextMeetingEvent(): MeetingEvent {
+export function getNextMeetingEvent(): MeetingEvent {
     let closestEvent: MeetingEvent = meetingEventList[0];
+    const now: DateTime = DateTime.now().setZone(riverFallsTimeZone, { keepLocalTime: true });
     for (const event of meetingEventList) {
-        if (event.eventDate.toMillis() < closestEvent.eventDate.toMillis()) {
+        if (addTwoHours(event.eventDate) > now) {
             closestEvent = event;
+            break;
         }
     }
     return closestEvent;
 }
+export function hasMeetingThisWeek() {
+    const today: number = DateTime.now().setZone('America/Chicago').toMillis();
+    const nextMeeting: number = getNextMeetingEvent().eventDate.toMillis();
+    const isFutureEvent: boolean = nextMeeting > today;
+    const isWithinOneWeek: boolean = nextMeeting <= today + TimeConversion.MILLISECONDS_IN_WEEK;
+    return isFutureEvent && isWithinOneWeek;
+}
+export function addTwoHours(dateTime: DateTime): DateTime {
+    return dateTime.plus({hours: 2});
+}
 export const nextEvent: MeetingEvent = getNextMeetingEvent();
 
+export function isFirstMeeting(): boolean {
+    return getNextMeetingEvent() === firstMeetingOfSemester && hasMeetingThisWeek();
+}
+export function isSecondMeeting(): boolean {
+    return getNextMeetingEvent() === readabilityMeeting && hasMeetingThisWeek();
+}
+export function isThirdMeeting(): boolean {
+    return getNextMeetingEvent() === shaneMeeting && hasMeetingThisWeek();
+}
+export function isFourthMeeting(): boolean {
+    return getNextMeetingEvent() === interviewWorkshop  && hasMeetingThisWeek();
+}
+export function isFifthMeeting(): boolean {
+    return getNextMeetingEvent() === ethanPriceMeeting && hasMeetingThisWeek();
+}
+export function isSixthMeeting(): boolean {
+    return getNextMeetingEvent() === samChapinMeeting  && hasMeetingThisWeek();
+}
+export function isSeventhMeeting(): boolean {
+    return getNextMeetingEvent() === debuggingExercise && hasMeetingThisWeek();
+}
+export function isEighthMeeting(): boolean {
+    return getNextMeetingEvent() === micsPreparation && hasMeetingThisWeek();
+}
+export function isNinthMeeting(): boolean {
+    return getNextMeetingEvent() === javaJumpStartWorkshop && hasMeetingThisWeek();
+}
+export function isTenthMeeting(): boolean {
+    return getNextMeetingEvent() === pythonUnleashed && hasMeetingThisWeek();
+}
+export function isEleventhMeeting(): boolean {
+    return getNextMeetingEvent() === websiteStyleExercise && hasMeetingThisWeek();
+}
+export function isTwelfthMeeting(): boolean {
+    return getNextMeetingEvent() === finalExamsStudyGroup && hasMeetingThisWeek();
+}
+export function isLastMeeting(): boolean {
+    return getNextMeetingEvent() === lastMeetingOfSemester && hasMeetingThisWeek();
+}
