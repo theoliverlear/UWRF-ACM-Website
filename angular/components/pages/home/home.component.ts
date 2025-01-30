@@ -46,12 +46,13 @@ export class HomeComponent implements AfterViewInit{
     ngAfterViewInit(): void {
         this.promoSequenceLoop();
     }
-    private async promoSequenceLoop() {
-        await this.promoSequence();
-        await this.delayService.delay(5000);
-        await this.reset();
-        await this.delayService.delay(2500);
-        await this.promoSequenceLoop();
+    private async promoSequenceLoop(): Promise<void> {
+        while (true) {
+            await this.promoSequence();
+            await this.delayService.delay(5000);
+            await this.reset();
+            await this.delayService.delay(2500);
+        }
     }
     async promoSequence(): Promise<void> {
         await this.typeIntroText();
