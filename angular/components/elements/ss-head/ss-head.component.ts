@@ -17,7 +17,6 @@ export class SsHeadComponent implements OnChanges{
     @Input() title: string;
     @Input() favicon: string = SsHeadComponent.DEFAULT_FAVICON;
     constructor(private renderer: Renderer2, @Inject(DOCUMENT) private document: Document) {
-        console.log('HeadComponent loaded');
         this.addFavicon(this.favicon);
     }
     ngOnChanges(changes: SimpleChanges): void {
@@ -50,7 +49,6 @@ export class SsHeadComponent implements OnChanges{
     private clearExisting(selector: string) {
         const existing = this.document.querySelectorAll(selector);
         existing.forEach((element) => {
-            console.log('Removing existing element: ' + element);
             this.renderer.removeChild(this.document.head, element);
         });
     }
