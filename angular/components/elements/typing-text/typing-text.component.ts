@@ -7,6 +7,7 @@ import {
 } from "@angular/core";
 import {TagType} from "../../../models/html/TagType";
 import {TypeSpeed} from "./models/TypeSpeed";
+import {DelayService} from "../../../services/delay.service";
 
 @Component({
     selector: 'typing-text',
@@ -25,8 +26,8 @@ export class TypingTextComponent implements AfterViewInit {
     @Input() hideBeingTypedClass: boolean = false;
     useBlinkingCursor: boolean = false;
     finishedTyping: boolean = false;
-    constructor(private renderer: Renderer2) {
-        console.log('TypingTextComponent loaded');
+    constructor(private renderer: Renderer2, private delayService: DelayService) {
+
     }
 
     shouldBlink() {
@@ -44,9 +45,6 @@ export class TypingTextComponent implements AfterViewInit {
         if (this.hideBeingTypedClass) {
             this.renderer.removeClass(this.typedText.nativeElement, 'being-typed');
         }
-    }
-    delay(ms: number): Promise<void> {
-        return new Promise((resolve) => setTimeout(resolve, ms));
     }
     ngAfterViewInit() {
         if (this.typeOnLoad) {
@@ -80,18 +78,19 @@ export class TypingTextComponent implements AfterViewInit {
         });
     }
     async typeTextWithDelay(delay: number): Promise<void> {
-        await new Promise<void>((resolve) => {
-            setTimeout(() => {
-                this.typeText().then(() => {
-                    resolve();
-                });
-            }, delay);
-        });
+        // await new Promise<void>((resolve) => {
+        //     setTimeout(() => {
+        //         this.typeText().then(() => {
+        //             resolve();
+        //         });
+        //     }, delay);
+        // });
+        await this.delayService.delay(delay);
+        await this.typeText();
     }
     //--------------------------------Delete-Text---------------------------------
     async deleteText(): Promise<void> {
         let typeSpeed = this.typeSpeed;
-        console.log('deleting text');
         let element = this.typedText.nativeElement;
         if (this.applyBeingTypedStyle) {
             element.classList.add('being-typed');
