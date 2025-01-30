@@ -86,7 +86,7 @@ function getNextMeetingTitle(): MeetingEventPrompt {
         }
     }
 }
-function hasMeetingThisWeek(): boolean {
+export function hasMeetingThisWeek(): boolean {
     const today: number = DateTime.now().setZone('America/Chicago').toMillis();
     for (const event of meetingEventPrompts) {
         if (!event.meetingEvent) {
