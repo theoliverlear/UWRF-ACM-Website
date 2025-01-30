@@ -16,7 +16,7 @@ export class SsAnchorComponent implements OnInit {
     @Input() elementLink: TextElementLink | ElementLink;
     hasText: boolean = false;
     constructor(private router: Router) {
-        console.log('SsAnchorComponent loaded');
+
     }
     ngOnInit() {
         this.hasText = this.elementLink instanceof TextElementLink;
