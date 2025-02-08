@@ -5,7 +5,9 @@
 @import "../../../styles/global-placeholders";
 
 guest-speaker-topic-list {
+    width: 90%;
     .topics-list {
+        width: 100%;
         @include flex(space-around, center, row);
         flex-wrap: wrap;
     }
