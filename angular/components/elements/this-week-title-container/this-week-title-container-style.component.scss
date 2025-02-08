@@ -6,4 +6,9 @@
 
 this-week-title-container {
     text-align: center;
+    width: 96%;
+    fade-in-content {
+        @include flex(center, center, column);
+        width: 100%;
+    }
 }
