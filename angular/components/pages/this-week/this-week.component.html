@@ -1,18 +1,20 @@
 <!-- this-week.component.html -->
 <floating-content>
-    <this-week-title-container [topicTitle]="nextMeetingPrompt.prompt"/>
+    <this-week-title-container [topicTitle]="getNextMeetingTitle().prompt"/>
 </floating-content>
-<fade-in-content *ngIf="isFirstMeeting()"
-                 class="trivia-div"
-                 [animationProperties]="thisWeekMeetingContentFadeInAnimationProperties">
-    <trivia *ngFor="let triviaGame of weekOneTriviaGames"
-            [triviaGame]="triviaGame"/>
+<fade-in-content [animationProperties]="thisWeekMeetingContentFadeInAnimationProperties">
+    <code-exercise *ngIf="isSecondMeeting()"
+                   [codeExercises]="codeQualityExercises"/>
+
+    <guest-speaker *ngIf="isThirdMeeting()"
+                   [speaker]="shaneOMalleyPottingGuestSpeaker"/>
+    <!--TODO: Add fourth meeting content-->
+    <guest-speaker *ngIf="isFifthMeeting()"
+                   [speaker]="ethanPriceGuestSpeaker"/>
+    <guest-speaker *ngIf="isSixthMeeting()"
+                   [speaker]="samChapinGuestSpeaker"/>
+
 </fade-in-content>
-<code-exercise *ngIf="isSecondMeeting()"
-               [codeExercises]="codeQualityExercises"/>
-<guest-speaker *ngIf="isThirdMeeting()"
-               [speaker]="shaneOMalleyPottingGuestSpeaker"/>
-<!--TODO: Add third meeting content-->
 
 
 
