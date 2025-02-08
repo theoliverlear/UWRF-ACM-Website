@@ -89,6 +89,9 @@ import {AcmActionComponent} from "./acm-action/acm-action.component";
 import {
     AcmActionListComponent
 } from "./acm-action-list/acm-action-list.component";
+import {
+    CodeEditorResetButtonComponent
+} from "./code-editor-reset-button/code-editor-reset-button.component";
 
 
 export const elements = [
@@ -97,6 +100,7 @@ export const elements = [
     AcmActionListComponent,
     CarouselComponent,
     CodeEditorComponent,
+    CodeEditorResetButtonComponent,
     CodeExerciseComponent,
     CodeSnippetComponent,
     DevTeamProjectComponent,
