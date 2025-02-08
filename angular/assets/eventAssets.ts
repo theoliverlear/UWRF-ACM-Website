@@ -93,9 +93,9 @@ export function getNextMeetingEvent(): MeetingEvent {
 export function hasMeetingThisWeek() {
     const today: number = DateTime.now().setZone('America/Chicago').toMillis();
     const nextMeeting: number = getNextMeetingEvent().eventDate.toMillis();
-    const isFutureEvent: boolean = nextMeeting > today;
+    // const isFutureEvent: boolean = nextMeeting > today;
     const isWithinOneWeek: boolean = nextMeeting <= today + TimeConversion.MILLISECONDS_IN_WEEK;
-    return isFutureEvent && isWithinOneWeek;
+    return isWithinOneWeek;
 }
 export function addTwoHours(dateTime: DateTime): DateTime {
     return dateTime.plus({hours: 2});
@@ -103,41 +103,54 @@ export function addTwoHours(dateTime: DateTime): DateTime {
 export const nextEvent: MeetingEvent = getNextMeetingEvent();
 
 export function isFirstMeeting(): boolean {
-    return getNextMeetingEvent() === firstMeetingOfSemester && hasMeetingThisWeek();
+    const isFirstMeetingNext: boolean = getNextMeetingEvent() === firstMeetingOfSemester;
+    return isFirstMeetingNext && hasMeetingThisWeek();
 }
 export function isSecondMeeting(): boolean {
-    return getNextMeetingEvent() === readabilityMeeting && hasMeetingThisWeek();
+    const isReadabilityMeetingNext: boolean = getNextMeetingEvent() === readabilityMeeting;
+    return isReadabilityMeetingNext && hasMeetingThisWeek();
 }
 export function isThirdMeeting(): boolean {
-    return getNextMeetingEvent() === shaneMeeting && hasMeetingThisWeek();
+    const isShaneMeetingNext: boolean = getNextMeetingEvent() === shaneMeeting;
+    return isShaneMeetingNext && hasMeetingThisWeek();
 }
 export function isFourthMeeting(): boolean {
-    return getNextMeetingEvent() === interviewWorkshop  && hasMeetingThisWeek();
+    const isInterviewWorkshopNext: boolean = getNextMeetingEvent() === interviewWorkshop;
+    return isInterviewWorkshopNext  && hasMeetingThisWeek();
 }
 export function isFifthMeeting(): boolean {
-    return getNextMeetingEvent() === ethanPriceMeeting && hasMeetingThisWeek();
+    const isEthanPriceMeetingNext: boolean = getNextMeetingEvent() === ethanPriceMeeting;
+    return isEthanPriceMeetingNext && hasMeetingThisWeek();
 }
 export function isSixthMeeting(): boolean {
-    return getNextMeetingEvent() === samChapinMeeting  && hasMeetingThisWeek();
+    const isSamChapinMeetingNext: boolean = getNextMeetingEvent() === samChapinMeeting;
+    return isSamChapinMeetingNext && hasMeetingThisWeek();
 }
 export function isSeventhMeeting(): boolean {
-    return getNextMeetingEvent() === debuggingExercise && hasMeetingThisWeek();
+    const isDebuggingExerciseNext: boolean = getNextMeetingEvent() === debuggingExercise;
+    return isDebuggingExerciseNext && hasMeetingThisWeek();
 }
 export function isEighthMeeting(): boolean {
-    return getNextMeetingEvent() === micsPreparation && hasMeetingThisWeek();
+    const isMicsPreparationNext: boolean = getNextMeetingEvent() === micsPreparation;
+    return isMicsPreparationNext && hasMeetingThisWeek();
 }
 export function isNinthMeeting(): boolean {
-    return getNextMeetingEvent() === javaJumpStartWorkshop && hasMeetingThisWeek();
+    const isJavaJumpStartWorkshopNext: boolean = getNextMeetingEvent() === javaJumpStartWorkshop;
+    return isJavaJumpStartWorkshopNext && hasMeetingThisWeek();
 }
 export function isTenthMeeting(): boolean {
-    return getNextMeetingEvent() === pythonUnleashed && hasMeetingThisWeek();
+    const isPythonUnleashedNext: boolean = getNextMeetingEvent() === pythonUnleashed;
+    return pythonUnleashed && hasMeetingThisWeek();
 }
 export function isEleventhMeeting(): boolean {
-    return getNextMeetingEvent() === websiteStyleExercise && hasMeetingThisWeek();
+    const isWebsiteStyleExerciseNext: boolean = getNextMeetingEvent() === websiteStyleExercise;
+    return isWebsiteStyleExerciseNext && hasMeetingThisWeek();
 }
 export function isTwelfthMeeting(): boolean {
-    return getNextMeetingEvent() === finalExamsStudyGroup && hasMeetingThisWeek();
+    const isFinalExamsStudyGroupNext: boolean = getNextMeetingEvent() === finalExamsStudyGroup;
+    return isFinalExamsStudyGroupNext && hasMeetingThisWeek();
 }
 export function isLastMeeting(): boolean {
-    return getNextMeetingEvent() === lastMeetingOfSemester && hasMeetingThisWeek();
+    const isLastMeetingNext: boolean = getNextMeetingEvent() === lastMeetingOfSemester;
+    return isLastMeetingNext && hasMeetingThisWeek();
 }
