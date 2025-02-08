@@ -3,7 +3,7 @@
 @import "../../../styles/global-mixins";
 @import "../../../styles/global-functions";
 @import "../../../styles/global-placeholders";
-$editor-color: #1E1E1E;
+$editor-color: hsl(0, 0%, 12%);
 
 code-editor {
     @include flex(space-around, center, column);
@@ -21,7 +21,7 @@ code-editor {
     }
     .code-editor-container {
         width: 90%;
-        height: $twenty-percent;
+        height: $thirty-percent;
         padding: $one-percent;
         background-color: $editor-color;
         box-shadow: $alabaster-stone 0 0 simplest-calc(0.15) simplest-calc(0.05);
