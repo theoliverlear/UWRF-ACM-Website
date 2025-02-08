@@ -10,4 +10,5 @@ guest-speaker-topic {
     margin: $one-percent;
     @extend %soft-border-radius;
     background-image: radial-gradient($alabaster-stone, $pristine-white);
+    flex-basis: $ten-percent;
 }
