@@ -7,10 +7,9 @@
     </div>
     <div class="story-div">
         <ss-paragraph [text]="successStory.successStoryText"/>
-        <ss-img [imageAsset]="randyFranzmeierImageAsset"/>
+        <ss-img [imageAsset]="successStory.imageAsset"/>
     </div>
     <quote *ngIf="hasMessage()"
            [quoteText]="successStory.message"
            [quotee]="successStory.name"/>
-    <hr/>
 </ng-container>
