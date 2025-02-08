@@ -6,7 +6,11 @@
 
 guest-speaker {
     @include flex(space-around, center, column);
-    width: 80%;
+    max-width: 90%;
+    @extend %soft-border-radius;
+    background-image:radial-gradient(at center, $charcoal, $faded-alabaster-stone);
+    box-shadow: $alabaster-stone 0 0 $half-percent calc($eighth-percent / 2);
+    margin: $one-percent 0;
     .title-with-subtitle {
         @include flex(center, center, column);
         background-image: radial-gradient($alabaster-stone, $pristine-white);
