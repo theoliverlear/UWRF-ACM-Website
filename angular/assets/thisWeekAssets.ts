@@ -72,16 +72,19 @@ export const meetingEventPrompts: MeetingEventPrompt[] = [
     thirteenthMeetingPrompt,
     noMeetingPrompt
 ]
-function getNextMeetingTitle(): MeetingEventPrompt {
+export function addTwoHours(dateTime: DateTime): DateTime {
+    return dateTime.plus({hours: 2});
+}
+export function getNextMeetingTitle(): MeetingEventPrompt {
     if (!hasMeetingThisWeek()) {
         return noMeetingPrompt;
     }
-    const currentDateValue: number = DateTime.now().setZone('America/Chicago').toMillis();
+    const currentDate: DateTime = DateTime.now().setZone('America/Chicago');
     for (const event of meetingEventPrompts) {
         if (!event.meetingEvent) {
             continue;
         }
-        if (event.meetingEvent.eventDate.toMillis() > currentDateValue) {
+        if (addTwoHours(event.meetingEvent.eventDate).toMillis() > currentDate.toMillis()) {
             return event;
         }
     }
