@@ -72,6 +72,10 @@ export const randyFranzmeierImageAsset: ImageAsset = {
     src: getSuccessStoryImagePath('randy_franzmeier.jpg'),
     alt: 'Randy Franzmeier'
 };
+export const coltonWilliamsImageAsset: ImageAsset = {
+    src: getSuccessStoryImagePath('colton_williams.png'),
+    alt: 'Colton Williams'
+}
 export const devTeamLogoImageAsset: ImageAsset = {
     src: getLogoImagePath('dev_team_logo.jpg'),
     alt: 'Dev Team Logo'
@@ -108,6 +112,14 @@ export const acmTalkImageAsset: ImageAsset = {
     src: getAcmMemberImagePath('acm_talk.jpg'),
     alt: 'ACM Talk'
 };
+export const acmGamingNightImageAsset: ImageAsset = {
+    src: getAcmMemberImagePath('acm_gaming_night.jpg'),
+    alt: 'ACM Gaming Night'
+}
+export const micsCompetitionImageAsset: ImageAsset = {
+    src: getAcmMemberImagePath('mics_competition.jpg'),
+    alt: 'MICS Competition'
+}
 export const acmMemberImageAssets: ImageAsset[] = [
     randyBeeScooterImageAsset,
     micsGroupImageAsset,
@@ -116,5 +128,7 @@ export const acmMemberImageAssets: ImageAsset[] = [
     acmNvidiaImageAsset,
     acmSelfieImageAsset,
     acmTriviaNightImageAsset,
-    acmTalkImageAsset
+    acmTalkImageAsset,
+    acmGamingNightImageAsset,
+    micsCompetitionImageAsset
 ];
