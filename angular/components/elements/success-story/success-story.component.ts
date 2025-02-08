@@ -19,5 +19,4 @@ export class SuccessStoryComponent {
         return this.successStory instanceof SuccessStoryMessage;
     }
     protected readonly TagType = TagType;
-    protected readonly randyFranzmeierImageAsset = randyFranzmeierImageAsset;
 }
