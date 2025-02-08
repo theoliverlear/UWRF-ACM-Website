@@ -16,13 +16,13 @@ export class CodeEditorComponent implements OnInit {
     constructor() {
         
     }
-    ngOnInit() {
+    ngOnInit(): void {
         this.editorOptions = {
             theme: CodeEditorComponent.EDITOR_THEME,
             language: this.editableCode.language,
-            automaticLayout: true
+            automaticLayout: true,
+            lineHeight: 35,
         };
     }
-
     protected readonly TagType = TagType;
 }
