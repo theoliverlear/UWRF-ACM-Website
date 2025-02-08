@@ -6,6 +6,9 @@
 
 this-week {
     @include flex(flex-start, center, column);
+    floating-content {
+        max-width: 90%;
+    }
     this-week-title-container {
         max-width: 95%;
         margin: $one-half-percent 0;
@@ -16,5 +19,9 @@ this-week {
     .meeting-content {
         @include flex(center, center, column);
         width: 80%;
+    }
+    fade-in-content {
+        @include flex(center, center, column);
+        width: 100%;
     }
 }
