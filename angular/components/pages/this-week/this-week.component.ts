@@ -1,18 +1,29 @@
 // this-week.component.ts 
 import {Component, Input} from "@angular/core";
-import {nextMeetingPrompt} from "../../../assets/thisWeekAssets";
+import {
+    getNextMeetingTitle,
+    nextMeetingPrompt
+} from "../../../assets/thisWeekAssets";
 import {weekOneLeetCodeProblems} from "../../../assets/leetCodeAssets";
 import {
     thisWeekMeetingContentFadeInAnimationProperties
 } from "../../animations/animationProperties";
-import {shaneOMalleyPottingGuestSpeaker} from "../../../assets/guestSpeakerAssets";
+import {
+    ethanPriceGuestSpeaker, samChapinGuestSpeaker,
+    shaneOMalleyPottingGuestSpeaker
+} from "../../../assets/guestSpeakerAssets";
 import {weekOneTriviaGames} from "../../../assets/triviaAssets";
 import {
     codeQualityExerciseOne,
     codeQualityExercises
 } from "../../../assets/codeExerciseAssets";
 import {
-    isFirstMeeting, isSecondMeeting, isThirdMeeting
+    isFifthMeeting,
+    isFirstMeeting,
+    isFourthMeeting,
+    isSecondMeeting,
+    isSixthMeeting,
+    isThirdMeeting
 } from "../../../assets/eventAssets";
 
 @Component({
@@ -35,4 +46,10 @@ export class ThisWeekComponent {
     protected readonly isSecondMeeting = isSecondMeeting;
     protected readonly isFirstMeeting = isFirstMeeting;
     protected readonly isThirdMeeting = isThirdMeeting;
+    protected readonly getNextMeetingTitle = getNextMeetingTitle;
+    protected readonly isFifthMeeting = isFifthMeeting;
+    protected readonly ethanPriceGuestSpeaker = ethanPriceGuestSpeaker;
+    protected readonly isSixthMeeting = isSixthMeeting;
+    protected readonly samChapinGuestSpeaker = samChapinGuestSpeaker;
+    protected readonly isFourthMeeting = isFourthMeeting;
 }
