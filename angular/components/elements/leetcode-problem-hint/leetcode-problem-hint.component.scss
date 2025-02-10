@@ -1,0 +1,10 @@
+// leetcode-problem-hint.component.scss
+@import "../../../styles/global-variables";
+@import "../../../styles/global-mixins";
+@import "../../../styles/global-functions";
+@import "../../../styles/global-placeholders";
+
+leetcode-problem-hint {
+    @include flex(center, center, column);
+    width: 100%;
+}

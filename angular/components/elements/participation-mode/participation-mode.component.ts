@@ -6,7 +6,7 @@ import {TagType} from "../../../models/html/TagType";
 @Component({
     selector: 'participation-mode',
     templateUrl: './participation-mode.component.html',
-    styleUrls: ['./participation-mode-style.component.css']
+    styleUrls: ['./participation-mode.component.css']
 })
 export class ParticipationModeComponent {
     @Input() protected participationMode: ParticipationMode;

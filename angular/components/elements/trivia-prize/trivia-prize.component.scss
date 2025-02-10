@@ -1,0 +1,14 @@
+// trivia-prize.component.scss
+@import "../../../styles/global-variables";
+@import "../../../styles/global-mixins";
+@import "../../../styles/global-functions";
+@import "../../../styles/global-placeholders";
+
+trivia-prize {
+    @include square-size($four-percent);
+    @include flex(center, center, row);
+    @extend %circle-border-radius;
+    background-image: linear-gradient(to right, $light-charcoal, $charcoal);
+    padding: $one-percent;
+    border: $thin-border solid $charcoal;
+}

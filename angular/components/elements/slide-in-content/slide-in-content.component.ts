@@ -6,7 +6,7 @@ import {SlideInProperties} from "../../animations/models/SlideInProperties";
 @Component({
     selector: 'slide-in-content',
     templateUrl: './slide-in-content.component.html',
-    styleUrls: ['./slide-in-content-style.component.css'],
+    styleUrls: ['./slide-in-content.component.css'],
     animations: [
         slideLeftAnimation
     ]

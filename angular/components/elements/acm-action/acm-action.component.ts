@@ -20,7 +20,7 @@ import {SsTitleComponent} from "../ss-title/ss-title.component";
 @Component({
     selector: 'acm-action',
     templateUrl: './acm-action.component.html',
-    styleUrls: ['./acm-action-style.component.css'],
+    styleUrls: ['./acm-action.component.css'],
     animations: [
         slideLeftAnimation
     ]

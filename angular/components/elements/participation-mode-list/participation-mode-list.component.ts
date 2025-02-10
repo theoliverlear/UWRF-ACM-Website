@@ -7,7 +7,7 @@ import {
 @Component({
     selector: 'participation-mode-list',
     templateUrl: './participation-mode-list.component.html',
-    styleUrls: ['./participation-mode-list-style.component.css']
+    styleUrls: ['./participation-mode-list.component.css']
 })
 export class ParticipationModeListComponent {
     @Input() protected participationModes: ParticipationMode[];

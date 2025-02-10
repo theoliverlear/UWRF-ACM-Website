@@ -1,0 +1,25 @@
+// quote.component.scss
+@import "../../../styles/global-variables";
+@import "../../../styles/global-mixins";
+@import "../../../styles/global-functions";
+@import "../../../styles/global-placeholders";
+
+quote {
+    @include flex(center, center, column);
+    font-family: $source-code-font;
+    color: $pristine-white;
+    background-image: radial-gradient(at center, $falcon-red 50%, $charcoal);
+    border: $thinnest-border solid $alabaster-stone;
+    @extend %soft-border-radius;
+    padding: $half-percent;
+    blockquote {
+        font-size: calc($p-font-size * 0.95);
+    }
+    cite {
+        font-size: calc($p-font-size * 0.85);
+        font-style: italic;
+        text-decoration: underline;
+        width: 100%;
+        text-align: center;
+    }
+}

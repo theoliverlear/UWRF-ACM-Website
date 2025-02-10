@@ -10,7 +10,7 @@ declare var particlesJS: any;
     selector: 'app',
     templateUrl: './app.component.html',
     inputs: ['name'],
-    styleUrls: ['./app-style.component.css']
+    styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit, AfterViewInit {
     title: string;

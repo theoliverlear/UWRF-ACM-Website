@@ -8,7 +8,7 @@ import {SuccessStoryMessage} from "./models/SuccessStoryMessage";
 @Component({
     selector: 'success-story',
     templateUrl: './success-story.component.html',
-    styleUrls: ['./success-story-style.component.css']
+    styleUrls: ['./success-story.component.css']
 })
 export class SuccessStoryComponent {
     @Input() protected successStory: SuccessStory | SuccessStoryMessage;

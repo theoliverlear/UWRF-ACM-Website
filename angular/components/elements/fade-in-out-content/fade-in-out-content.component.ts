@@ -8,7 +8,7 @@ import {
 @Component({
     selector: 'fade-in-out-content',
     templateUrl: './fade-in-out-content.component.html',
-    styleUrls: ['./fade-in-out-content-style.component.css'],
+    styleUrls: ['./fade-in-out-content.component.css'],
     animations: [
         fadeInOutAnimation
     ]

@@ -1,0 +1,14 @@
+// this-week-title-container.component.scss
+@import "../../../styles/global-variables";
+@import "../../../styles/global-mixins";
+@import "../../../styles/global-functions";
+@import "../../../styles/global-placeholders";
+
+this-week-title-container {
+    text-align: center;
+    width: 96%;
+    fade-in-content {
+        @include flex(center, center, column);
+        width: 100%;
+    }
+}

@@ -5,7 +5,7 @@ import {TagType} from "../../../models/html/TagType";
 @Component({
     selector: 'this-week-subtitle',
     templateUrl: './this-week-subtitle.component.html',
-    styleUrls: ['./this-week-subtitle-style.component.css']
+    styleUrls: ['./this-week-subtitle.component.css']
 })
 export class ThisWeekSubtitleComponent {
     @Input() topicTitle: string;

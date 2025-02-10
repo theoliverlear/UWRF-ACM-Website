@@ -6,7 +6,7 @@ import {TagType} from "../../../models/html/TagType";
 @Component({
     selector: 'guest-speaker',
     templateUrl: './guest-speaker.component.html',
-    styleUrls: ['./guest-speaker-style.component.css']
+    styleUrls: ['./guest-speaker.component.css']
 })
 export class GuestSpeakerComponent {
     @Input() speaker: GuestSpeaker;

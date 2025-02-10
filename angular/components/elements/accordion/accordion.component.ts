@@ -10,7 +10,7 @@ import {DelayService} from "../../../services/delay.service";
 @Component({
     selector: 'accordion',
     templateUrl: './accordion.component.html',
-    styleUrls: ['./accordion-style.component.css'],
+    styleUrls: ['./accordion.component.css'],
     animations: [
         accordionPopAnimation
     ]

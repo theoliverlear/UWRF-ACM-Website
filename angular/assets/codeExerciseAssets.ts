@@ -84,6 +84,40 @@ const codeQualityExerciseThreeStartingCode: string = `public class CorporateInco
         return 0.0;
     }
 }`;
+export const codeQualityExerciseFourStartingCode: string = `public class AcmJanitor {
+    public static void checkRoom(String roomName,
+                                 int numPeopleOccupying,
+                                 boolean floorsVacuumed,
+                                 boolean trashEmptied,
+                                 boolean lightsOff,
+                                 boolean windowsClosed,
+                                 boolean doorLocked,
+                                 int numComputersOn) {
+        boolean nobodyInRoom = numPeopleOccupying == 0;
+        boolean roomClean = floorsVacuumed && trashEmptied;
+        boolean roomSecure = windowsClosed && doorLocked;
+        boolean essentialComputersOn = numComputersOn == 3;
+        if (nobodyInRoom && roomClean && lightsOff &&
+                roomSecure && essentialComputersOn) {
+            System.out.println("Room " + roomName + " is ready for the night.");
+        } else {
+            System.out.println("Room " + roomName + " is not ready for the night.");
+        }
+    }
+}
+class PossibleDataStructure {
+    // Fields
+    public String possibleField;
+    // ...
+    // Constructor
+    public PossibleDataStructure() {
+
+    }
+    // Methods
+    public boolean possibleMethod() {
+        return true;
+    }
+}`;
 export const codeQualityExerciseOne = new EditableCode(
     ProgrammingLanguage.JAVA,
     codeQualityExerciseOneStartingCode,
@@ -99,8 +133,14 @@ export const codeQualityExerciseThree = new EditableCode(
     codeQualityExerciseThreeStartingCode,
     "Code Quality Exercise Three"
 );
+export const codeQualityExerciseFour = new EditableCode(
+    ProgrammingLanguage.JAVA,
+    codeQualityExerciseFourStartingCode,
+    "Code Quality Exercise Four"
+);
 export const codeQualityExercises: EditableCode[] = [
     codeQualityExerciseOne,
     codeQualityExerciseTwo,
-    codeQualityExerciseThree
+    codeQualityExerciseThree,
+    codeQualityExerciseFour
 ];

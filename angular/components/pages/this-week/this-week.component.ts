@@ -29,7 +29,7 @@ import {
 @Component({
     selector: 'this-week',
     templateUrl: './this-week.component.html',
-    styleUrls: ['./this-week-style.component.css']
+    styleUrls: ['./this-week.component.css']
 })
 export class ThisWeekComponent {
     @Input() topicTitle: string;

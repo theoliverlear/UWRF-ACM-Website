@@ -24,7 +24,7 @@ const defaultAcmMeetingPlace = 'South Hall 21 and Virtually In Discord, Thursday
 export const firstMeetingOfSemester: MeetingEvent = new MeetingEvent('First Meeting of Semester',
                                                                      getMeetingDateTime('2025-02-06'),
                                                                      defaultAcmMeetingPlace);
-export const readabilityMeeting: MeetingEvent = new MeetingEvent("Code Quality and Readability Seminar",
+export const readabilityMeeting: MeetingEvent = new MeetingEvent("Code Quality and Readability Workshop",
                                                                  getMeetingDateTime('2025-02-13'),
                                                                 defaultAcmMeetingPlace);
 export const shaneMeeting: MeetingEvent = new MeetingEvent('Shane O\'Malley Potting Talks to ACM',

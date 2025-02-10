@@ -9,7 +9,7 @@ import {ProblemDifficulty} from "../../../models/leetcode/ProblemDifficulty";
 @Component({
     selector: 'leetcode-problem',
     templateUrl: './leetcode-problem.component.html',
-    styleUrls: ['./leetcode-problem-style.component.css']
+    styleUrls: ['./leetcode-problem.component.css']
 })
 export class LeetCodeProblemComponent implements OnInit {
     @Input() problem: LeetCodeProblem;

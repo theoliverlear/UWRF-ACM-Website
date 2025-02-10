@@ -28,7 +28,7 @@ import {DelayService} from "../../../services/delay.service";
 @Component({
     selector: 'home',
     templateUrl: './home.component.html',
-    styleUrls: ['./home-style.component.css']
+    styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements AfterViewInit{
     @ViewChild('topTypingText') topTypingText: TypingTextComponent;

@@ -5,7 +5,7 @@ import {EditableCode} from "../../../models/meetings/code/EditableCode";
 @Component({
     selector: 'code-exercise',
     templateUrl: './code-exercise.component.html',
-    styleUrls: ['./code-exercise-style.component.css']
+    styleUrls: ['./code-exercise.component.css']
 })
 export class CodeExerciseComponent {
     @Input() protected codeExercises: EditableCode[];

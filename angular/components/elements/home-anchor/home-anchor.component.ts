@@ -6,7 +6,7 @@ import {logoImageAsset} from "../../../assets/imageAssets";
 @Component({
     selector: 'home-anchor',
     templateUrl: './home-anchor.component.html',
-    styleUrls: ['./home-anchor-style.component.css']
+    styleUrls: ['./home-anchor.component.css']
 })
 export class HomeAnchorComponent {
     constructor() {

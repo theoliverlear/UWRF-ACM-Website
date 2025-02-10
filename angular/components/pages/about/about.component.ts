@@ -23,7 +23,7 @@ import {
 @Component({
     selector: 'about',
     templateUrl: './about.component.html',
-    styleUrls: ['./about-style.component.css'],
+    styleUrls: ['./about.component.css'],
     animations: [
         slideLeftAnimation
     ]

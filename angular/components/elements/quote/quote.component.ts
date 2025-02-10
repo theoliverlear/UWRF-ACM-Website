@@ -4,7 +4,7 @@ import {Component, Input} from "@angular/core";
 @Component({
     selector: 'quote',
     templateUrl: './quote.component.html',
-    styleUrls: ['./quote-style.component.css']
+    styleUrls: ['./quote.component.css']
 })
 export class QuoteComponent {
     @Input() protected quotee: string;

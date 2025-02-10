@@ -6,7 +6,7 @@ import {TagType} from "../../../models/html/TagType";
 @Component({
     selector: 'dev-team-project',
     templateUrl: './dev-team-project.component.html',
-    styleUrls: ['./dev-team-project-style.component.css']
+    styleUrls: ['./dev-team-project.component.css']
 })
 export class DevTeamProjectComponent {
     @Input() protected project: DevTeamProject;

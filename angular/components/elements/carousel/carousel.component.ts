@@ -8,7 +8,7 @@ import {ImageAsset} from "../../../assets/imageAssets";
 @Component({
     selector: 'carousel',
     templateUrl: './carousel.component.html',
-    styleUrls: ['./carousel-style.component.css']
+    styleUrls: ['./carousel.component.css']
 })
 export class CarouselComponent {
     @Input() protected imageAssets: ImageAsset[];

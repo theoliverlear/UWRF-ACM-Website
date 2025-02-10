@@ -4,7 +4,7 @@ import { Component } from "@angular/core";
 @Component({
     selector: 'code-editor-reset-button',
     templateUrl: './code-editor-reset-button.component.html',
-    styleUrls: ['./code-editor-reset-button-style.component.css']
+    styleUrls: ['./code-editor-reset-button.component.css']
 })
 export class CodeEditorResetButtonComponent {
     constructor() {

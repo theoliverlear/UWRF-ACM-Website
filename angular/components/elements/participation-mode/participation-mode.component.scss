@@ -1,0 +1,19 @@
+// participation-mode.component.scss
+@import "../../../styles/global-variables";
+@import "../../../styles/global-mixins";
+@import "../../../styles/global-functions";
+@import "../../../styles/global-placeholders";
+
+participation-mode {
+    @include flex(center, center, column);
+    margin: $one-percent $half-percent;
+    max-width: $twenty-percent;
+    background-image: radial-gradient(at center, $pristine-white, $sandstone);
+    @extend %soft-border-radius;
+    padding: $half-percent;
+    box-shadow: $light-charcoal 0 0 simplest-calc(0.15) simplest-calc(0.1);
+    ss-title {
+        color: $neutral-black;
+        margin: $quarter-percent 0;
+    }
+}

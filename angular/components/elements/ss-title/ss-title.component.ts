@@ -5,7 +5,7 @@ import {TagType} from "../../../models/html/TagType";
 @Component({
     selector: 'ss-title',
     templateUrl: './ss-title.component.html',
-    styleUrls: ['./ss-title-style.component.css']
+    styleUrls: ['./ss-title.component.css']
 })
 export class SsTitleComponent {
     @Input() tagType: TagType = TagType.H1;

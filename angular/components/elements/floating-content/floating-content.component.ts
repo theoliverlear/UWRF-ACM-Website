@@ -4,7 +4,7 @@ import {gsap} from "gsap";
 @Component({
     selector: 'floating-content',
     templateUrl: './floating-content.component.html',
-    styleUrls: ['./floating-content-style.component.css']
+    styleUrls: ['./floating-content.component.css']
 })
 export class FloatingContentComponent {
     constructor() {

@@ -1,0 +1,10 @@
+// acm-action.component.scss
+@import "../../../styles/global-variables";
+@import "../../../styles/global-mixins";
+@import "../../../styles/global-functions";
+@import "../../../styles/global-placeholders";
+
+acm-action-list {
+    @include flex(space-around, center, row);
+    flex-wrap: wrap;
+}

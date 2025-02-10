@@ -8,7 +8,7 @@ import {
 @Component({
     selector: 'this-week-title-container',
     templateUrl: './this-week-title-container.component.html',
-    styleUrls: ['./this-week-title-container-style.component.css']
+    styleUrls: ['./this-week-title-container.component.css']
 })
 export class ThisWeekTitleContainerComponent {
     @Input() topicTitle: string;

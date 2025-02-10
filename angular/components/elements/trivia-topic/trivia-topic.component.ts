@@ -6,7 +6,7 @@ import {TriviaTopic} from "../../../models/meetings/trivia/TriviaTopic";
 @Component({
     selector: 'trivia-topic',
     templateUrl: './trivia-topic.component.html',
-    styleUrls: ['./trivia-topic-style.component.css']
+    styleUrls: ['./trivia-topic.component.css']
 })
 export class TriviaTopicComponent {
     @Input() protected triviaTopic: TriviaTopic;

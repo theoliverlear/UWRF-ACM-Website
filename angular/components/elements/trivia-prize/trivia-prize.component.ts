@@ -11,7 +11,7 @@ import {
 @Component({
     selector: 'trivia-prize',
     templateUrl: './trivia-prize.component.html',
-    styleUrls: ['./trivia-prize-style.component.css']
+    styleUrls: ['./trivia-prize.component.css']
 })
 export class TriviaPrizeComponent {
     @Input() protected triviaPrize: TriviaPrize;

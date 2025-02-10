@@ -6,7 +6,7 @@ import {DateTime} from "luxon";
 @Component({
     selector: 'event-countdown-timer',
     templateUrl: './event-countdown-timer.component.html',
-    styleUrls: ['./event-countdown-timer-style.component.css']
+    styleUrls: ['./event-countdown-timer.component.css']
 })
 export class EventCountdownTimerComponent implements OnInit {
     @Input() protected eventDate: DateTime;

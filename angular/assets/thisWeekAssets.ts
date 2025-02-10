@@ -96,11 +96,12 @@ export function hasMeetingThisWeek(): boolean {
             continue;
         }
         const eventDate: number = event.meetingEvent.eventDate.toMillis();
-        const isFutureEvent: boolean = eventDate > today;
+        // const isFutureEvent: boolean = eventDate > today;
         const isWithinOneWeek: boolean = eventDate <= today + TimeConversion.MILLISECONDS_IN_WEEK;
-        if (isFutureEvent && isWithinOneWeek) {
-            return true;
-        }
+        // if (isFutureEvent && isWithinOneWeek) {
+        //     return true;
+        // }
+        return isWithinOneWeek;
     }
     return false;
 }

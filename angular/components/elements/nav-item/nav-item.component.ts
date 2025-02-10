@@ -6,7 +6,7 @@ import {SsAnchorComponent} from "../ss-anchor/ss-anchor.component";
 @Component({
     selector: 'nav-item',
     templateUrl: './nav-item.component.html',
-    styleUrls: ['./nav-item-style.component.css']
+    styleUrls: ['./nav-item.component.css']
 })
 export class NavItemComponent {
     @Input() elementLink: TextElementLink;

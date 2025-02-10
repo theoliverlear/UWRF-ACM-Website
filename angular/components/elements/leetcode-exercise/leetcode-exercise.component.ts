@@ -5,7 +5,7 @@ import {LeetCodeProblem} from "../../../models/leetcode/LeetCodeProblem";
 @Component({
     selector: 'leetcode-exercise',
     templateUrl: './leetcode-exercise.component.html',
-    styleUrls: ['./leetcode-exercise-style.component.css']
+    styleUrls: ['./leetcode-exercise.component.css']
 })
 export class LeetCodeExerciseComponent {
     @Input() problems: LeetCodeProblem[];

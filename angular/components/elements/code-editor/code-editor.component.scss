@@ -1,0 +1,36 @@
+// code-editor.component.scss
+@import "../../../styles/global-variables";
+@import "../../../styles/global-mixins";
+@import "../../../styles/global-functions";
+@import "../../../styles/global-placeholders";
+$editor-color: hsl(0, 0%, 12%);
+
+code-editor {
+    @include flex(space-around, center, column);
+    width: 95%;
+    ss-title {
+        text-align: center;
+        margin: $half-percent 0;
+        text-shadow: $falcon-red 0 0 simplest-calc(0.05);
+        background-image: radial-gradient(circle, $pristine-white, $alabaster-stone);
+        padding: $half-percent;
+        @extend %soft-border-radius;
+        border: $thinnest-border solid $alabaster-stone;
+        box-shadow: $alabaster-stone 0 0 simplest-calc(0.2) simplest-calc(0.0125);
+        color: $falcon-red;
+    }
+    .code-editor-container {
+        width: 90%;
+        height: $thirty-percent;
+        padding: $one-percent;
+        background-color: $editor-color;
+        box-shadow: $alabaster-stone 0 0 simplest-calc(0.15) simplest-calc(0.05);
+        margin: $one-percent 0;
+        @extend %soft-border-radius;
+        ngx-monaco-editor {
+            &.code-editor {
+                @extend %fill-container;
+            }
+        }
+    }
+}

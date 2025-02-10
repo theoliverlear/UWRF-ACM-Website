@@ -18,7 +18,7 @@ import {
 @Component({
     selector: 'acm-action-list',
     templateUrl: './acm-action-list.component.html',
-    styleUrls: ['./acm-action-list-style.component.css'],
+    styleUrls: ['./acm-action-list.component.css'],
     animations: [
         slideLeftAnimation
     ]

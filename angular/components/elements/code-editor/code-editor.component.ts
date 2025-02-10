@@ -6,7 +6,7 @@ import {TagType} from "../../../models/html/TagType";
 @Component({
     selector: 'code-editor',
     templateUrl: './code-editor.component.html',
-    styleUrls: ['./code-editor-style.component.css']
+    styleUrls: ['./code-editor.component.css']
 })
 export class CodeEditorComponent implements OnInit {
     protected editorOptions: any;

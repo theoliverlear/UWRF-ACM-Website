@@ -6,7 +6,7 @@ import {getNextMeetingEvent, nextEvent} from "../../../assets/eventAssets";
 @Component({
     selector: 'event-popup',
     templateUrl: './event-popup.component.html',
-    styleUrls: ['./event-popup-style.component.css']
+    styleUrls: ['./event-popup.component.css']
 })
 export class EventPopupComponent implements AfterViewInit {
     @Input() meetingEvent: MeetingEvent = nextEvent;
