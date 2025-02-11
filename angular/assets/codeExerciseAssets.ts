@@ -76,6 +76,7 @@ const codeQualityExerciseThreeStartingCode: string = `public class CorporateInco
     public void anotherPossibleMethod() {
         System.out.println("...");
     }
+    
     public double possibleMathMethod() {
         return 0.0;
     }
