@@ -1,0 +1,13 @@
+// interview-question-list.component.scss
+@import "../../../styles/global-variables";
+@import "../../../styles/global-mixins";
+@import "../../../styles/global-functions";
+@import "../../../styles/global-placeholders";
+
+interview-question-list {
+   @include flex(center, center, column);
+    width: 100%;
+    interview-question {
+        //transform: translateX(calc($two-percent * -1));
+    }
+}
