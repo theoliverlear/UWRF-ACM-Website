@@ -1,0 +1,15 @@
+// interview-question.component.scss
+@import "../../../styles/global-variables";
+@import "../../../styles/global-mixins";
+@import "../../../styles/global-functions";
+@import "../../../styles/global-placeholders";
+
+interview-question {
+    @include flex(center, center, row);
+    width: $fifty-percent;
+    max-width: 70%;
+    margin: $three-quarter-percent 0;
+    checkbox {
+        margin-right: $one-percent;
+    }
+}
