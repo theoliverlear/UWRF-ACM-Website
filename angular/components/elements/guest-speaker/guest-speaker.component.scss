@@ -7,6 +7,7 @@
 guest-speaker {
     @include flex(space-around, center, column);
     max-width: 90%;
+    padding: $one-percent;
     @extend %soft-border-radius;
     background-image:radial-gradient(at center, $charcoal, $faded-alabaster-stone);
     box-shadow: $alabaster-stone 0 0 $half-percent calc($eighth-percent / 2);
