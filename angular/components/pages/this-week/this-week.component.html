@@ -8,15 +8,14 @@
 
     <guest-speaker *ngIf="isThirdMeeting()"
                    [speaker]="shaneOMalleyPottingGuestSpeaker"/>
-    <!--TODO: Add fourth meeting content-->
+    <interview-workshop *ngIf="isFourthMeeting()"/>
+
     <guest-speaker *ngIf="isFifthMeeting()"
                    [speaker]="ethanPriceGuestSpeaker"/>
     <guest-speaker *ngIf="isSixthMeeting()"
                    [speaker]="samChapinGuestSpeaker"/>
 
 </fade-in-content>
-
-
 
 <!--<fade-in-content class="meeting-content" [animationProperties]="thisWeekMeetingContentFadeInAnimationProperties">-->
 <!--    <leetcode-exercise [problems]="weekOneLeetCodeProblems"/>-->
