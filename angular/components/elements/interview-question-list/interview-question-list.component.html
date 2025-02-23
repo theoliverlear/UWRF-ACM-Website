@@ -1,0 +1,8 @@
+<!-- interview-question-list.component.html -->
+<ng-container>
+    <ss-title [text]="this.titleText" [tagType]="TagType.H3"/>
+    <hr/>
+    <ng-container *ngFor="let interviewQuestion of this.interviewQuestionList">
+        <interview-question [interviewQuestion]="interviewQuestion"/>
+    </ng-container>
+</ng-container>
