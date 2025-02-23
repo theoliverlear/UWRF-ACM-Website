@@ -92,6 +92,16 @@ import {
 import {
     CodeEditorResetButtonComponent
 } from "./code-editor-reset-button/code-editor-reset-button.component";
+import {
+    InterviewWorkshopComponent
+} from "./interview-workshop/interview-workshop.component";
+import {CheckboxComponent} from "./checkbox/checkbox.component";
+import {
+    InterviewQuestionComponent
+} from "./interview-question/interview-question.component";
+import {
+    InterviewQuestionListComponent
+} from "./interview-question-list/interview-question-list.component";
 
 
 export const elements = [
@@ -99,6 +109,7 @@ export const elements = [
     AcmActionComponent,
     AcmActionListComponent,
     CarouselComponent,
+    CheckboxComponent,
     CodeEditorComponent,
     CodeEditorResetButtonComponent,
     CodeExerciseComponent,
@@ -115,6 +126,9 @@ export const elements = [
     GuestSpeakerTopicComponent,
     GuestSpeakerTopicListComponent,
     HomeAnchorComponent,
+    InterviewQuestionComponent,
+    InterviewQuestionListComponent,
+    InterviewWorkshopComponent,
     LeetCodeExerciseComponent,
     LeetCodeProblemComponent,
     LeetCodeProblemHintComponent,
