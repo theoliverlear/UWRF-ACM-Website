@@ -11,7 +11,7 @@ const shaneOMalleyPottingTopics: string[] = [
     "Career Advice",
     "Infrastructure",
     "Student Success",
-    "Migrating Legacy Systems"
+    "Migrating Systems"
 ];
 export let shaneOMalleyPottingGuestSpeaker: GuestSpeaker = new GuestSpeaker(
     "Shane",
