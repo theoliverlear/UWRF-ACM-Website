@@ -132,3 +132,7 @@ export const acmMemberImageAssets: ImageAsset[] = [
     acmGamingNightImageAsset,
     micsCompetitionImageAsset
 ];
+export const confirmIconImageAsset: ImageAsset = {
+    src: getIconImagePath('confirm_icon.svg'),
+    alt: 'Confirm Icon'
+};
