@@ -3,6 +3,7 @@
 @import "../../../styles/global-mixins";
 @import "../../../styles/global-functions";
 @import "../../../styles/global-placeholders";
+@import "../../elements/ss-button/ss-button.component.scss";
 
 this-week {
     @include flex(flex-start, center, column);
@@ -23,5 +24,9 @@ this-week {
     fade-in-content {
         @include flex(center, center, column);
         width: 100%;
+    }
+    #replit-button {
+        padding: $one-percent;
+        @extend ss-button;
     }
 }
