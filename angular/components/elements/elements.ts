@@ -102,6 +102,9 @@ import {
 import {
     InterviewQuestionListComponent
 } from "./interview-question-list/interview-question-list.component";
+import {
+    MicsPreparationComponent
+} from "./mics-preparation/mics-preparation.component";
 
 
 export const elements = [
@@ -132,6 +135,7 @@ export const elements = [
     LeetCodeExerciseComponent,
     LeetCodeProblemComponent,
     LeetCodeProblemHintComponent,
+    MicsPreparationComponent,
     NavBarComponent,
     NavItemComponent,
     ParticipationModeComponent,
