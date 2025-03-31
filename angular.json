@@ -63,6 +63,7 @@
               "angular/components/elements/leetcode-exercise/leetcode-exercise.component.css",
               "angular/components/elements/leetcode-problem-hint/leetcode-problem-hint.component.css",
               "angular/components/elements/leetcode-problem/leetcode-problem.component.css",
+              "angular/components/elements/mics-preparation/mics-preparation.component.css",
               "angular/components/elements/nav-bar/nav-bar.component.css",
               "angular/components/elements/nav-item/nav-item.component.css",
               "angular/components/elements/participation-mode-list/participation-mode-list.component.css",
