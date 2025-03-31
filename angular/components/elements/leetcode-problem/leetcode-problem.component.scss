@@ -3,7 +3,7 @@
 @import "../../../styles/global-mixins";
 @import "../../../styles/global-functions";
 @import "../../../styles/global-placeholders";
-@import "../ss-button/ss-button-style.component";
+@import "../ss-button/ss-button.component";
 
 leetcode-problem {
     @include flex(center, center, column);
@@ -13,7 +13,10 @@ leetcode-problem {
     padding: $one-percent;
     .problem-title-button {
         @extend ss-button;
-        width: $eighteen-percent;
+        a {
+            @include flex(center, center, row);
+        }
+        max-width: $thirty-percent;
         height: $four-percent;
         padding: $half-percent $one-percent;
     }
