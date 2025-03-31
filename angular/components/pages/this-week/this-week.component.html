@@ -15,6 +15,12 @@
     <guest-speaker *ngIf="isSixthMeeting()"
                    [speaker]="samChapinGuestSpeaker"/>
 
+    <ss-anchor id="replit-button"
+        *ngIf="isSeventhMeeting()"
+        [elementLink]="replitElementLink"/>
+
+    <mics-preparation *ngIf="isEighthMeeting()"/>
+
 </fade-in-content>
 
 <!--<fade-in-content class="meeting-content" [animationProperties]="thisWeekMeetingContentFadeInAnimationProperties">-->
