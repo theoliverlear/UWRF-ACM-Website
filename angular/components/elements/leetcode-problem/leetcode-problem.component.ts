@@ -22,7 +22,7 @@ export class LeetCodeProblemComponent implements OnInit {
                                                TargetType.BLANK,
                                                false,
                                                this.problem.title,
-                                               TagType.H3);
+                                               TagType.H4);
     }
     public hasHint(): boolean {
         const isUndefined: boolean = this.problem.hint === undefined;
