@@ -18,13 +18,15 @@ import {
     codeQualityExercises
 } from "../../../assets/codeExerciseAssets";
 import {
+    isEighthMeeting,
     isFifthMeeting,
     isFirstMeeting,
     isFourthMeeting,
-    isSecondMeeting,
+    isSecondMeeting, isSeventhMeeting,
     isSixthMeeting,
     isThirdMeeting
 } from "../../../assets/eventAssets";
+import {replitElementLink} from "../../../assets/elementLinkAssets";
 
 @Component({
     selector: 'this-week',
@@ -52,4 +54,7 @@ export class ThisWeekComponent {
     protected readonly isSixthMeeting = isSixthMeeting;
     protected readonly samChapinGuestSpeaker = samChapinGuestSpeaker;
     protected readonly isFourthMeeting = isFourthMeeting;
+    protected readonly isSeventhMeeting = isSeventhMeeting;
+    protected readonly replitElementLink = replitElementLink;
+    protected readonly isEighthMeeting = isEighthMeeting;
 }
