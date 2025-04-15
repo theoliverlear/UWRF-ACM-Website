@@ -25,7 +25,7 @@ this-week {
         @include flex(center, center, column);
         width: 100%;
     }
-    #replit-button {
+    .content-button {
         padding: $one-percent;
         @extend ss-button;
     }
