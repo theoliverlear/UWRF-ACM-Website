@@ -21,12 +21,15 @@ import {
     isEighthMeeting,
     isFifthMeeting,
     isFirstMeeting,
-    isFourthMeeting,
+    isFourthMeeting, isNinthMeeting,
     isSecondMeeting, isSeventhMeeting,
-    isSixthMeeting,
+    isSixthMeeting, isTenthMeeting,
     isThirdMeeting
 } from "../../../assets/eventAssets";
-import {replitElementLink} from "../../../assets/elementLinkAssets";
+import {
+    javaJumpStartElementLink, pythonUnleashedElementLink,
+    replitElementLink
+} from "../../../assets/elementLinkAssets";
 
 @Component({
     selector: 'this-week',
@@ -57,4 +60,8 @@ export class ThisWeekComponent {
     protected readonly isSeventhMeeting = isSeventhMeeting;
     protected readonly replitElementLink = replitElementLink;
     protected readonly isEighthMeeting = isEighthMeeting;
+    protected readonly isNinthMeeting = isNinthMeeting;
+    protected readonly javaJumpStartElementLink = javaJumpStartElementLink;
+    protected readonly isTenthMeeting = isTenthMeeting;
+    protected readonly pythonUnleashedElementLink = pythonUnleashedElementLink;
 }
