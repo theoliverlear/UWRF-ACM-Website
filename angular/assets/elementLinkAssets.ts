@@ -33,6 +33,17 @@ export const replitElementLink = new TextElementLink("https://replit.com/join/hh
                                                     false,
                                                     "Debug on Replit",
                                                     TagType.H3);
+export const javaJumpStartElementLink: TextElementLink = new TextElementLink("https://github.com/theoliverlear/Java-Jump-Start",
+                                                                             TargetType.BLANK,
+                                                                             false,
+                                                                             "Get Started with Java",
+                                                                             TagType.H3);
+
+export const pythonUnleashedElementLink: TextElementLink = new TextElementLink("https://github.com/theoliverlear/Python-Unleashed",
+    TargetType.BLANK,
+    false,
+    "Get Started with Python",
+    TagType.H3);
 
 
 export const currencyConverterElementLink = new TextElementLink('https://github.com/UWRF-Development-Team/Currency-Converter',
