@@ -18,7 +18,7 @@ import {
     codeQualityExercises
 } from "../../../assets/codeExerciseAssets";
 import {
-    isEighthMeeting,
+    isEighthMeeting, isEleventhMeeting,
     isFifthMeeting,
     isFirstMeeting,
     isFourthMeeting, isNinthMeeting,
@@ -28,7 +28,7 @@ import {
 } from "../../../assets/eventAssets";
 import {
     javaJumpStartElementLink, pythonUnleashedElementLink,
-    replitElementLink
+    replitElementLink, websiteExerciseElementLink
 } from "../../../assets/elementLinkAssets";
 
 @Component({
@@ -64,4 +64,6 @@ export class ThisWeekComponent {
     protected readonly javaJumpStartElementLink = javaJumpStartElementLink;
     protected readonly isTenthMeeting = isTenthMeeting;
     protected readonly pythonUnleashedElementLink = pythonUnleashedElementLink;
+    protected readonly isEleventhMeeting = isEleventhMeeting;
+    protected readonly websiteExerciseElementLink = websiteExerciseElementLink;
 }
