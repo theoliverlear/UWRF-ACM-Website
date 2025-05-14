@@ -33,6 +33,13 @@ export const replitElementLink = new TextElementLink("https://replit.com/join/hh
                                                     false,
                                                     "Debug on Replit",
                                                     TagType.H3);
+
+export const websiteExerciseElementLink: TextElementLink = new TextElementLink("https://replit.com/join/ynpicrblnf-theoliverlear",
+TargetType.BLANK,
+false,
+"Start Designing on Replit",
+TagType.H3);
+
 export const javaJumpStartElementLink: TextElementLink = new TextElementLink("https://github.com/theoliverlear/Java-Jump-Start",
                                                                              TargetType.BLANK,
                                                                              false,
