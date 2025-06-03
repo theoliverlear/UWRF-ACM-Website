@@ -22,7 +22,7 @@ Spring 2025 Schedule:
 const riverFallsTimeZone: string = 'America/Chicago';
 const defaultAcmMeetingPlace = 'South Hall 21 and Virtually In Discord, Thursdays 4:30 PM';
 export const firstMeetingOfSemester: MeetingEvent = new MeetingEvent('First Meeting of Semester',
-                                                                     getMeetingDateTime('2025-02-06'),
+                                                                     getMeetingDateTime('2025-09-11'),
                                                                      defaultAcmMeetingPlace);
 export const readabilityMeeting: MeetingEvent = new MeetingEvent("Code Quality and Readability Workshop",
                                                                  getMeetingDateTime('2025-02-13'),
