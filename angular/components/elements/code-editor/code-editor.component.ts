@@ -11,8 +11,8 @@ import {TagType} from "../../../models/html/TagType";
 export class CodeEditorComponent implements OnInit {
     protected editorOptions: any;
     static readonly EDITOR_THEME: string = 'vs-dark';
-    @Input() protected editableCode: EditableCode;
-    @Input() protected exerciseTitle?: string;
+    @Input() editableCode: EditableCode;
+    @Input() exerciseTitle?: string;
     constructor() {
         
     }
