@@ -9,7 +9,7 @@ import {DateTime} from "luxon";
     styleUrls: ['./event-countdown-timer.component.css']
 })
 export class EventCountdownTimerComponent implements OnInit {
-    @Input() protected eventDate: DateTime;
+    @Input() eventDate: DateTime;
     protected readonly meetingDurationInMinutes: number = 120;
     protected isDuringEvent: boolean = false;
     protected remainingTime: number;
