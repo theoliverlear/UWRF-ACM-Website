@@ -6,7 +6,6 @@
 
 accordion {
     @include flex(center, center, column);
-    //width: $fifteen-percent;
     min-height: $three-percent;
     background-color: $neutral-black;
     width: 90%;
@@ -23,16 +22,9 @@ accordion {
     ss-img {
         @include square-size($one-half-percent);
         margin: 0 $three-quarter-percent;
-        //background-image: radial-gradient($falcon-red, $neutral-black);
-        //background-image: radial-gradient($alabaster-stone, $neutral-black);
         background-image: radial-gradient($charcoal, $light-charcoal);
         padding: $half-percent;
         @extend %circle-border-radius;
-    }
-    &:active {
-        ss-img {
-            //animation: rotate-img 0.5s;
-        }
     }
     &.accordion-triggered {
         ss-img {
